@@ -1,0 +1,9 @@
+D:\LiHe\EmbeddedSoftware\H200\StepMotorCurveCalcTool\LiHeStepMotorCurveCalcTool\bin\Debug\LiHeStepMotorCurveCalcTool.exe
+D:\LiHe\EmbeddedSoftware\H200\StepMotorCurveCalcTool\LiHeStepMotorCurveCalcTool\bin\Debug\LiHeStepMotorCurveCalcTool.pdb
+D:\LiHe\EmbeddedSoftware\H200\StepMotorCurveCalcTool\LiHeStepMotorCurveCalcTool\obj\Debug\LiHeStepMotorCurveCalcTool.csprojAssemblyReference.cache
+D:\LiHe\EmbeddedSoftware\H200\StepMotorCurveCalcTool\LiHeStepMotorCurveCalcTool\obj\Debug\LiHeStepMotorCurveCalcTool.MainPage.resources
+D:\LiHe\EmbeddedSoftware\H200\StepMotorCurveCalcTool\LiHeStepMotorCurveCalcTool\obj\Debug\LiHeStepMotorCurveCalcTool.Properties.Resources.resources
+D:\LiHe\EmbeddedSoftware\H200\StepMotorCurveCalcTool\LiHeStepMotorCurveCalcTool\obj\Debug\LiHeStepMotorCurveCalcTool.csproj.GenerateResource.cache
+D:\LiHe\EmbeddedSoftware\H200\StepMotorCurveCalcTool\LiHeStepMotorCurveCalcTool\obj\Debug\LiHeStepMotorCurveCalcTool.csproj.CoreCompileInputs.cache
+D:\LiHe\EmbeddedSoftware\H200\StepMotorCurveCalcTool\LiHeStepMotorCurveCalcTool\obj\Debug\LiHeStepMotorCurveCalcTool.exe
+D:\LiHe\EmbeddedSoftware\H200\StepMotorCurveCalcTool\LiHeStepMotorCurveCalcTool\obj\Debug\LiHeStepMotorCurveCalcTool.pdb

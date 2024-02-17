@@ -1,0 +1,168 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus II License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+# Date created = 18:13:01  November 06, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		H200_CPLD_Motor12_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX II"
+set_global_assignment -name DEVICE EPM1270T144C5
+set_global_assignment -name TOP_LEVEL_ENTITY H200_CPLD_Motor12
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:13:01  NOVEMBER 06, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION 15.0.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 144
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
+set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
+set_global_assignment -name VERILOG_FILE H200_CPLD_Motor12.v
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_1 -to select_n
+set_location_assignment PIN_18 -to mainClk
+set_location_assignment PIN_3 -to int0
+set_location_assignment PIN_4 -to int1
+set_location_assignment PIN_5 -to int3
+set_location_assignment PIN_6 -to int2
+set_location_assignment PIN_21 -to addr[0]
+set_location_assignment PIN_2 -to fsmcClk
+set_location_assignment PIN_7 -to data[7]
+set_location_assignment PIN_8 -to data[6]
+set_location_assignment PIN_11 -to data[5]
+set_location_assignment PIN_12 -to data[4]
+set_location_assignment PIN_13 -to data[3]
+set_location_assignment PIN_14 -to data[2]
+set_location_assignment PIN_15 -to data[1]
+set_location_assignment PIN_16 -to data[0]
+set_location_assignment PIN_22 -to addr[1]
+set_location_assignment PIN_23 -to addr[2]
+set_location_assignment PIN_24 -to addr[3]
+set_location_assignment PIN_27 -to addr[4]
+set_location_assignment PIN_28 -to addr[7]
+set_location_assignment PIN_29 -to addr[6]
+set_location_assignment PIN_30 -to addr[5]
+set_location_assignment PIN_31 -to write_n
+set_location_assignment PIN_32 -to read_n
+set_location_assignment PIN_37 -to cdcE[3]
+set_location_assignment PIN_39 -to cdcE[1]
+set_location_assignment PIN_40 -to cdcE[0]
+set_location_assignment PIN_41 -to cdcD[7]
+set_location_assignment PIN_42 -to cdcD[6]
+set_location_assignment PIN_43 -to cdcD[5]
+set_location_assignment PIN_44 -to cdcD[4]
+set_location_assignment PIN_45 -to cdcD[3]
+set_location_assignment PIN_48 -to cdcD[2]
+set_location_assignment PIN_49 -to cdcD[1]
+set_location_assignment PIN_50 -to cdcD[0]
+set_location_assignment PIN_51 -to cdcC[7]
+set_location_assignment PIN_52 -to cdcC[6]
+set_location_assignment PIN_53 -to cdcC[5]
+set_location_assignment PIN_55 -to cdcC[4]
+set_location_assignment PIN_57 -to cdcC[3]
+set_location_assignment PIN_58 -to cdcC[2]
+set_location_assignment PIN_59 -to cdcC[1]
+set_location_assignment PIN_62 -to cdcC[0]
+set_location_assignment PIN_63 -to cdcB[7]
+set_location_assignment PIN_66 -to cdcB[6]
+set_location_assignment PIN_67 -to cdcB[5]
+set_location_assignment PIN_68 -to cdcB[4]
+set_location_assignment PIN_69 -to cdcB[3]
+set_location_assignment PIN_70 -to cdcB[2]
+set_location_assignment PIN_71 -to cdcB[1]
+set_location_assignment PIN_72 -to cdcB[0]
+set_location_assignment PIN_73 -to cdcA[7]
+set_location_assignment PIN_74 -to cdcA[6]
+set_location_assignment PIN_75 -to cdcA[5]
+set_location_assignment PIN_76 -to cdcA[4]
+set_location_assignment PIN_77 -to cdcA[3]
+set_location_assignment PIN_78 -to cdcA[2]
+set_location_assignment PIN_79 -to cdcA[1]
+set_location_assignment PIN_80 -to cdcA[0]
+set_location_assignment PIN_81 -to stemMotor11PWM
+set_location_assignment PIN_86 -to stemMotor12PWM
+set_location_assignment PIN_38 -to cdcE[2]
+set_location_assignment PIN_84 -to stepMotor11Dir
+set_location_assignment PIN_85 -to stepMotor11En
+set_location_assignment PIN_93 -to stemMotor10PWM
+set_location_assignment PIN_96 -to stemMotor9PWM
+set_location_assignment PIN_101 -to stemMotor8PWM
+set_location_assignment PIN_104 -to stemMotor7PWM
+set_location_assignment PIN_107 -to stemMotor6PWM
+set_location_assignment PIN_110 -to stemMotor5PWM
+set_location_assignment PIN_113 -to stemMotor4PWM
+set_location_assignment PIN_118 -to stemMotor3PWM
+set_location_assignment PIN_121 -to stemMotor2PWM
+set_location_assignment PIN_124 -to stemMotor1PWM
+set_location_assignment PIN_87 -to stepMotor12Dir
+set_location_assignment PIN_88 -to stepMotor12En
+set_location_assignment PIN_94 -to stepMotor10Dir
+set_location_assignment PIN_95 -to stepMotor10En
+set_location_assignment PIN_97 -to stepMotor9Dir
+set_location_assignment PIN_102 -to stepMotor8Dir
+set_location_assignment PIN_105 -to stepMotor7Dir
+set_location_assignment PIN_108 -to stepMotor6Dir
+set_location_assignment PIN_111 -to stepMotor5Dir
+set_location_assignment PIN_114 -to stepMotor4Dir
+set_location_assignment PIN_119 -to stepMotor3Dir
+set_location_assignment PIN_122 -to stepMotor2Dir
+set_location_assignment PIN_125 -to stepMotor1Dir
+set_location_assignment PIN_98 -to stepMotor9En
+set_location_assignment PIN_103 -to stepMotor8En
+set_location_assignment PIN_106 -to stepMotor7En
+set_location_assignment PIN_109 -to stepMotor6En
+set_location_assignment PIN_112 -to stepMotor5En
+set_location_assignment PIN_117 -to stepMotor4En
+set_location_assignment PIN_120 -to stepMotor3En
+set_location_assignment PIN_123 -to stepMotor2En
+set_location_assignment PIN_127 -to stepMotor1En
+set_location_assignment PIN_130 -to nopB[4]
+set_location_assignment PIN_131 -to nopB[3]
+set_location_assignment PIN_132 -to nopB[2]
+set_location_assignment PIN_133 -to nopB[1]
+set_location_assignment PIN_134 -to nopB[0]
+set_location_assignment PIN_137 -to nopA[7]
+set_location_assignment PIN_138 -to nopA[6]
+set_location_assignment PIN_139 -to nopA[5]
+set_location_assignment PIN_140 -to nopA[4]
+set_location_assignment PIN_129 -to nopB[5]
+set_location_assignment PIN_141 -to nopA[3]
+set_location_assignment PIN_142 -to nopA[2]
+set_location_assignment PIN_143 -to nopA[1]
+set_location_assignment PIN_144 -to nopA[0]
+set_location_assignment PIN_61 -to reset_n
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
+set_global_assignment -name CDF_FILE output_files/Chain8.cdf

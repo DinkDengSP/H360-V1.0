@@ -1,0 +1,27 @@
+#include "LiquidDetectDevice.h"
+
+//初始化探液需要使用的端口
+void LiquidPortInit(void)
+{
+    //LED信号输出
+    InOutInitWithOut(LIQUID_LED_PORT,LIQUID_LED_PIN,LIQUID_LED_UNVALID_LEVEL);
+    //给主控的信号输出
+    InOutInitWithOut(LIQUID_SIGNAL_PORT,LIQUID_SIGNAL_PIN,LIQUID_SIGNAL_UNVALID_LEVEL);
+    //主控给的信号输入
+    InOutInitWithIn(LIQUID_ENABLE_PORT,LIQUID_ENABLE_PIN);
+}
+
+//设置探液信号使能
+void LiquidPortOutSetValid(void)
+{
+    InOutSetOut(LIQUID_LED_PORT,LIQUID_LED_PIN,LIQUID_LED_VALID_LEVEL);
+    InOutSetOut(LIQUID_SIGNAL_PORT,LIQUID_SIGNAL_PIN,LIQUID_SIGNAL_VALID_LEVEL);
+}
+
+//设置探液信号失效
+void LiquidPortOutSetUnValid(void)
+{
+    InOutSetOut(LIQUID_LED_PORT,LIQUID_LED_PIN,LIQUID_LED_UNVALID_LEVEL);
+    InOutSetOut(LIQUID_SIGNAL_PORT,LIQUID_SIGNAL_PIN,LIQUID_SIGNAL_UNVALID_LEVEL);
+}
+

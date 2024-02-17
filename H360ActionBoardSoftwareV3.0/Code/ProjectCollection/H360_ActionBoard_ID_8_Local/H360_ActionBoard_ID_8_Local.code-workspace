@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": ".\\..\\..\\CommonFunc"
+		},
+		{
+			"path": ".\\..\\..\\CommonService"
+		},
+		{
+			"path": ".\\..\\..\\Driver"
+		},
+		{
+			"path": ".\\..\\..\\UCOS3.07"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"appimplrailtrans.h": "c",
+			"appimplregionrackoutwaitpos1.h": "c",
+			"appimplrackwaitout1.h": "c",
+			"appimplrackoutswitch.h": "c"
+		}
+	}
+}

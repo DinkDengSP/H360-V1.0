@@ -1,0 +1,174 @@
+/*-Specials指定中断向量表存放位置,一般也就是程序起始位置-*/
+define symbol __ICFEDIT_intvec_start__ = 0x08000000;
+/*------------------------------程序存储区,也是只读区域------------------------------------------------*/
+define symbol __ICFEDIT_region_FLASH_BANK1_start__  = 0x08000000;
+define symbol __ICFEDIT_region_FLASH_BANK1_end__    = 0x080FFFFF;
+define symbol __ICFEDIT_region_FLASH_BANK2_start__  = 0x08100000;
+define symbol __ICFEDIT_region_FLASH_BANK2_end__    = 0x081FFFFF;
+/*----------------------------------------------------------------------------------------------*/
+/*-ITCM,内核中,与内核速度一致,容量64KB,最好是用于极端需要速度的代码运行,例如复杂滤波计算,加密解密计算等-*/
+define symbol __ICFEDIT_region_ITCMR_start__        = 0x00000000;
+define symbol __ICFEDIT_region_ITCMR_end__          = 0x0000FFFF;
+
+/*----------------------------------------------------------------------------------------------*/
+/*-融合DTCM1和DTCM2,128KB,预留1KB用于中断向量表-*/
+define symbol __ICFEDIT_region_DTCMR_start__        = 0x20000400;
+define symbol __ICFEDIT_region_DTCMR_end__          = 0x2001FFFF;
+
+/*----------------------------------------------------------------------------------------------*/
+/*-AXISRAM,D1域中,频率为内核分频出来的AXI总线频率,D3域的BDMA不能访问这段内存,容量512KB-*/
+/*-用于DMA访问-*/
+define symbol __ICFEDIT_region_AXISR_DMA_start__    = 0x24000000;
+define symbol __ICFEDIT_region_AXISR_DMA_end__      = 0x2400FFFF;
+/*-用于常规带CACHE内存-*/
+define symbol __ICFEDIT_region_AXISR_start__        = 0x24010000;
+define symbol __ICFEDIT_region_AXISR_end__          = 0x2407FFFF;
+
+/*----------------------------------------------------------------------------------------------*/
+/*-D2_SRAM1,D2域中,频率为内核分频出来的AHB总线频率,容量128KB-*/
+define symbol __ICFEDIT_region_SRAM1_start__        = 0x30000000;
+define symbol __ICFEDIT_region_SRAM1_end__          = 0x3001FFFF;
+
+/*----------------------------------------------------------------------------------------------*/
+/*-D2_SRAM2,D2域中,频率为内核分频出来的AHB总线频率,容量128KB-*/
+define symbol __ICFEDIT_region_SRAM2_start__        = 0x30020000;
+define symbol __ICFEDIT_region_SRAM2_end__          = 0x3003FFFF;
+
+/*----------------------------------------------------------------------------------------------*/
+/*-D2_SRAM3,D2域中,频率为内核分频出来的AHB总线频率,,,容量32KB-*/
+/*-芯片的辅助RAM区域,主要是用于本区间外设的数据缓存,例如NET USB,或者D2域中的外设-*/
+define symbol __ICFEDIT_region_SRAM3_start__        = 0x30040000;
+define symbol __ICFEDIT_region_SRAM3_end__          = 0x30047FFF;
+
+/*----------------------------------------------------------------------------------------------*/
+/*-D3_SRAM4域中,频率为内核分频出来的AHB总线频率,容量64KB-*/
+/*-芯片的辅助RAM区域,可以用于D3域中的DMA访问,例如BDMA,D2域断电后也可以运行程序代码-*/
+define symbol __ICFEDIT_region_SRAM4_DMA_start__    = 0x38000000;
+define symbol __ICFEDIT_region_SRAM4_DMA_end__      = 0x38007FFF;
+
+define symbol __ICFEDIT_region_SRAM4_start__        = 0x38008000;
+define symbol __ICFEDIT_region_SRAM4_end__          = 0x3800FFFF;
+
+/*----------------------------------------------------------------------------------------------*/
+/*-BK_SRAM,D3域中,频率为内核分频出来的AHB总线频率,,,容量4KB-*/
+/*-备份SRAM,主要用于低功耗模式下的数据保存,VBAT接电池-*/
+define symbol __ICFEDIT_region_BKPR_start__         = 0x38800000;
+define symbol __ICFEDIT_region_BKPR_end__           = 0x38800FFF;
+
+/*----------------------------------------------------------------------------------------------*/
+/*-FMC上外挂的SDRAM1,频率为AXI分出的FMC继续分频的频率,,容量看芯片类型-*/
+/*-外挂SDRAM,D1域能访问的和使用的,这里都能使用-*/
+define symbol __ICFEDIT_region_SDRAM1_start__       = 0xC0000000;/*SDRAM1内存*/
+define symbol __ICFEDIT_region_SDRAM1_end__         = 0xC1FFFFFF;
+
+define symbol __ICFEDIT_region_SDRAM2_start__       = 0xD0000000;/*SDRAM2内存*/
+define symbol __ICFEDIT_region_SDRAM2_end__         = 0xD1FFFFFF;
+
+
+/*----------------------------------------------------------------------------------------------*/
+/*-------------------------系统栈尺寸-------------------------*/
+define symbol __ICFEDIT_size_cstack__               = 0x2000;
+/*-------------------------系统堆尺寸-------------------------*/
+define symbol __ICFEDIT_size_heap__                 = 0x2000;
+/*-------------------------系统调试栈尺寸---------------------*/
+define symbol __ICFEDIT_size_proc_stack__           = 0x0000;
+/**** End of ICF editor section. ###ICF###*/
+
+
+define memory mem with size = 4G;
+/*-全部FLASH空间-*/
+/*-BANK1 FLASH空间-*/
+define region FLASH_BANK1_region  =   mem:[from __ICFEDIT_region_FLASH_BANK1_start__ to __ICFEDIT_region_FLASH_BANK1_end__];
+
+/*-BANK2 FLASH空间-*/
+define region FLASH_BANK2_region  =   mem:[from __ICFEDIT_region_FLASH_BANK2_start__ to __ICFEDIT_region_FLASH_BANK2_end__];
+
+/*-ITCM RAM空间-*/
+define region ITCMR_region  =   mem:[from __ICFEDIT_region_ITCMR_start__  to __ICFEDIT_region_ITCMR_end__ ];
+
+/*-DTCM RAM 全部空间-*/
+define region DTCMR_region  =   mem:[from __ICFEDIT_region_DTCMR_start__ to __ICFEDIT_region_DTCMR_end__];
+
+/*-D1 AXI SRAM DMA全部空间-*/
+define region AXISR_DMA_region  =   mem:[from __ICFEDIT_region_AXISR_DMA_start__  to __ICFEDIT_region_AXISR_DMA_end__ ];
+/*-D1 AXI SRAM 全部空间-*/
+define region AXISR_region  =   mem:[from __ICFEDIT_region_AXISR_start__  to __ICFEDIT_region_AXISR_end__ ];
+
+/*-D2 SRAM1 全部空间-*/
+define region D2_SRAM1_region   =   mem:[from __ICFEDIT_region_SRAM1_start__  to __ICFEDIT_region_SRAM1_end__ ];
+
+/*-D2 SRAM2 全部空间-*/
+define region D2_SRAM2_DMA_region   =   mem:[from __ICFEDIT_region_SRAM2_start__  to __ICFEDIT_region_SRAM2_end__ ];
+
+/*-D2 SRAM3 全部空间-*/
+define region D2_SRAM3_region   =   mem:[from __ICFEDIT_region_SRAM3_start__  to __ICFEDIT_region_SRAM3_end__ ];
+
+/*-D3 SRAM4 DMA空间-*/
+define region D3_SRAM4_DMA_region   =   mem:[from __ICFEDIT_region_SRAM4_DMA_start__  to __ICFEDIT_region_SRAM4_DMA_end__ ];
+/*-D3 SRAM4 全部空间-*/
+define region D3_SRAM4_region   =   mem:[from __ICFEDIT_region_SRAM4_start__  to __ICFEDIT_region_SRAM4_end__ ];
+
+/*-D3 备份域 全部空间-*/
+define region BKPR_region   =   mem:[from __ICFEDIT_region_BKPR_start__   to __ICFEDIT_region_BKPR_end__  ];
+
+/*-FMC SDRAM1 全部空间-*/
+define region SDRAM1_region    =   mem:[from __ICFEDIT_region_SDRAM1_start__   to __ICFEDIT_region_SDRAM1_end__  ];
+define region SDRAM2_region    =   mem:[from __ICFEDIT_region_SDRAM2_start__   to __ICFEDIT_region_SDRAM2_end__  ];
+
+/*-系统堆栈尺寸-*/
+define block CSTACK     with alignment = 8, size = __ICFEDIT_size_cstack__     { };
+define block PROC_STACK with alignment = 8, size = __ICFEDIT_size_proc_stack__ { };
+define block HEAP       with alignment = 8, size = __ICFEDIT_size_heap__       { };
+
+/*-需要初始化的内存空间属性定义-*/
+initialize by copy { readwrite, section .itcmFuncSection };
+/*-不需要初始化的特定空间-*/
+do not initialize  { section .noinit ,section .sdram1 ,section .sdram2};
+/*-如果使用了系统动态库,动态库的使用逻辑-*/
+if (isdefinedsymbol(__USE_DLIB_PERTHREAD))
+{
+  // Required in a multi-threaded application
+  initialize by copy with packing = none { section __DLIB_PERTHREAD };
+}
+
+/*-中断向量表的放置位置-*/
+place at address mem:__ICFEDIT_intvec_start__ { readonly section .intvec };
+/*-系统代码二进制文件的放置位置 容量1MB-*/
+place in FLASH_BANK1_region  { readonly };
+/*-系统FLASH2指定存放的位置的放置位置 容量1MB-*/
+place in FLASH_BANK2_region  { readonly section .FLASH_BANK2 };
+
+/*-RAM Code*/
+define block RamCode {section .textrw};
+/*-容量64KB-*/
+place in ITCMR_region { section .itcmFuncSection,block RamCode };
+
+/*-容量128KB-*/
+place in DTCMR_region  { section .dtcm_ram, block CSTACK, block PROC_STACK};
+
+/*-AXI SRAM DMA内存-*/
+place in AXISR_DMA_region  {section .axi_dma_sram};
+/*-AXI SRAM Cache内存-*/
+place in AXISR_region  { readwrite,section .axi_sram, block HEAP };
+
+/*-D2_SRAM1 Cache内存-*/
+place in D2_SRAM1_region   { section .d2_sram1 };
+
+/*-D2_SRAM2 Cache内存-*/
+place in D2_SRAM2_DMA_region   { section .d2_sram2_dma };
+
+/*-D2_SRAM3 Cache内存-*/
+place in D2_SRAM3_region   { section .d2_sram3_dma };
+
+/*-D3_SRAM4 用于DMA内存-*/
+//place in D3_SRAM4_DMA_region   { section .d3_sram4_dma };
+/*-D3_SRAM4 Cache内存-*/
+place in D3_SRAM4_region   { section .d3_sram4 };
+
+/*-D3_BK_SRAM4 Cache内存-*/
+place in BKPR_region   { section .backup_sram };
+
+/*-SDRAM1 Cache内存-*/
+place in SDRAM1_region    { section .sdram1 };
+/*-SDRAM2 Cache内存-*/
+place in SDRAM2_region    { section .sdram2 };

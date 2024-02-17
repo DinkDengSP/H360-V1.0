@@ -1,0 +1,42 @@
+/*******************************************************************
+ *Description: Copyright(c) 2018-2025 LiHeBio,All rights reserved.
+ *Author: DengXiaoJun
+ *Date: 2020-01-14 13:26:09
+ *LastEditors: DengXiaoJun
+ *LastEditTime: 2020-10-27 13:27:53
+ *FilePath: \H360ActionBoardSoftwareV2.3\ProjectCollection\H360_ActionBoard_Bootloader\DriverConfig\UserConfig\UserMemManagerConfig.h
+ *ModifyRecord1:    
+ *ModifyRecord2:    
+ *ModifyRecord3:    
+ *ModifyRecord4:    
+ *ModifyRecord5:    
+******************************************************************/
+#ifndef __USER_MEM_MANAGE_CONFIG_H_
+#define __USER_MEM_MANAGE_CONFIG_H_
+#include "stm32f4xx.h"
+
+//SRAM IN 内存 系统总内存为112K 主要用在系统堆和此处,可以同时被CPU和DMA访问
+//内存块大小为32字节
+#define SRAM_IN_BLOCK_SIZE			32 
+//最大管理内存
+#define SRAM_IN_MAX_SIZE			100*1024 
+//内存表大小
+#define SRAM_IN_ALLOC_TABLE_SIZE	(SRAM_IN_MAX_SIZE/SRAM_IN_BLOCK_SIZE) 
+
+//SRAM CCM内存 系统共64K CCM内存,主要用作系统栈和此处
+//内存块大小为32字节
+#define SRAM_CCM_BLOCK_SIZE			32 
+//最大管理内存,系统栈也是存放在CCM空间的
+#define SRAM_CCM_MAX_SIZE			34*1024 
+//内存表大小
+#define SRAM_CCM_ALLOC_TABLE_SIZE	(SRAM_CCM_MAX_SIZE/SRAM_CCM_BLOCK_SIZE) 
+
+//最大管理内存
+#define SRAM_IS62_MAX_SIZE			1024*1024
+
+
+#endif
+
+
+
+

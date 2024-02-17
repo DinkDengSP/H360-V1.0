@@ -1,0 +1,69 @@
+#ifndef __CAN2_SUB_RAIL_HAND_H_
+#define __CAN2_SUB_RAIL_HAND_H_
+#include "Can2SubRailBase.h"
+
+//轨道机械手旋转复位
+LH_ERR Can2SubRailHandResetRotateWhileReturn(RAIL_RESET_CORRECT_FLAG resetFlag);
+
+//轨道机械手前后复位
+LH_ERR Can2SubRailHandResetBackFrontWhileReturn(RAIL_RESET_CORRECT_FLAG resetFlag);
+
+//轨道机械手升降复位
+LH_ERR Can2SubRailHandResetUpDownWhileReturn(RAIL_RESET_CORRECT_FLAG resetFlag);
+
+//轨道机械手三轴复位
+LH_ERR Can2SubRailHandResetAllWhileReturn(void);
+
+//轨道机械手抓取进样1
+LH_ERR Can2SubRailHandCatchPushIn1WhileReturn(HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手抓取进样2
+LH_ERR Can2SubRailHandCatchPushIn2WhileReturn(HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手放下出样1
+LH_ERR Can2SubRailHandPutPushOut1WhileReturn(HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手放下出样2
+LH_ERR Can2SubRailHandPutPushOut2WhileReturn(HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手旋转到进样方向
+LH_ERR Can2SubRailHandRotatePushInWhileReturn(HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手旋转到急诊方向
+LH_ERR Can2SubRailHandRotateEmergencyCallWhileReturn(HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手旋转到指定方向
+LH_ERR Can2SubRailHandRotateSpecialDirWhileReturn(HAND_DIR targetDir,HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手抓取急诊位
+LH_ERR Can2SubRailHandCatchEmergencyCallWhileReturn(HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手抓取特定模块待测位架子
+LH_ERR Can2SubRailHandCatchWaitTestWhileReturn(RAIL_MODULE_POS railModuleNo,HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手放下特定模块测试位架子
+LH_ERR Can2SubRailHandPutWaitTestWhileReturn(RAIL_MODULE_POS railModuleNo,HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手抓取特定模块重测位架子
+LH_ERR Can2SubRailHandCatchRepeatTestWhileReturn(RAIL_MODULE_POS railModuleNo,HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手放下特定模块重测位架子
+LH_ERR Can2SubRailHandPutRepeatTestWhileReturn(RAIL_MODULE_POS railModuleNo,HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手获取当前方向和试管架有无状态
+LH_ERR Can2SubRailHandGetStateWhileReturn(HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手夹爪伸出到出样1
+LH_ERR Can2SubRailHandClawReachPushOut1WhileReturn(HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手夹爪伸出到出样2
+LH_ERR Can2SubRailHandClawReachPushOut2WhileReturn(HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+//轨道机械手回收夹爪
+LH_ERR Can2SubRailHandTakeClawBackWhileReturn(HAND_DIR* handCurrentDirPtr,SENSOR_STATE_HAND_RACK_EXIST* handCurrentRackExistPtr);
+
+
+#endif
+
+
+

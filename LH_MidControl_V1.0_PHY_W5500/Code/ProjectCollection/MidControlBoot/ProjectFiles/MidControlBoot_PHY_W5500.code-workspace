@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\..\\CommonFiles"
+		},
+		{
+			"path": "..\\..\\..\\Driver"
+		},
+		{
+			"path": "..\\..\\..\\FileX"
+		},
+		{
+			"path": "..\\..\\..\\ThreadX"
+		},
+		{
+			"path": "..\\..\\..\\NetXDUO"
+		}
+	],
+	"settings": {
+		"svn.ignoreMissingSvnWarning": true,
+		"files.associations": {
+			"mcu_mpu.h": "c",
+			"boardinc.h": "c",
+			"netx_port.h": "c",
+			"boardw5500.h": "c",
+			"boardconfig.h": "c",
+			"mcu_spi_universal.h": "c",
+			"intpriority.h": "c",
+			"mcu_spi2.h": "c"
+		}
+	}
+}

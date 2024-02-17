@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": ".\\..\\..\\CommonFunc"
+		},
+		{
+			"path": ".\\..\\..\\CommonService"
+		},
+		{
+			"path": ".\\..\\..\\Driver"
+		},
+		{
+			"path": ".\\..\\..\\UCOS3.07"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"apptaskconfig.h": "c",
+			"appipcfluidcircuitbufferinjection.h": "c",
+			"appipcfluidcircuitexcitelight.h": "c",
+			"appipcfluidcircuitneedlebead.h": "c",
+			"appipcfluidcircuitneedlereagent.h": "c",
+			"appipcmixwash.h": "c",
+			"appipcneedlewash.h": "c",
+			"appipcparam.h": "c",
+			"appipcplatewash.h": "c",
+			"appimplplatewash.h": "c",
+			"appimplbufferinject.h": "c"
+		}
+	}
+}

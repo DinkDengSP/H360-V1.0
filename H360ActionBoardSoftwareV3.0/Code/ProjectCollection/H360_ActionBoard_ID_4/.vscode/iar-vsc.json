@@ -1,0 +1,14 @@
+{
+  "ewp": "${workspaceFolder}\\ProjectFiles\\H360_ActionBoard_ID_4.ewp",
+  "configuration": "H360_Release",
+  "toolchain": "C:\\\\Program Files\\\\IAR Systems\\\\IAR ARM 9.3",
+  "workbench": {
+    "path": "C:\\Program Files\\IAR Systems\\IAR ARM 9.3"
+  },
+  "project": {
+    "path": "${workspaceFolder}\\ProjectFiles\\H360_ActionBoard_ID_4.ewp"
+  },
+  "configs": {
+    "${workspaceFolder}\\ProjectFiles\\H360_ActionBoard_ID_4.ewp": "H360_Release"
+  }
+}

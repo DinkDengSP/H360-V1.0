@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../CommonFiles"
+		},
+		{
+			"path": "../../../DriverThreadX"
+		},
+		{
+			"path": "../../../DriverUniversal"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"BoardW5500.C": "cpp",
+			"eth_config.h": "c",
+			"boarddrvheader.h": "c",
+			"usermemmanage.h": "c",
+			"boardversion.h": "c",
+			"systemversion.h": "c",
+			"type_traits": "c",
+			"__config": "c",
+			"limits": "c",
+			"initializer_list": "c"
+		}
+	}
+}

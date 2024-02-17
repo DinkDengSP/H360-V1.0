@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": ".\\..\\..\\CommonFunc"
+		},
+		{
+			"path": ".\\..\\..\\Driver"
+		},
+		{
+			"path": ".\\..\\..\\UCOS3.07"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"serviceactionutilmsg.h": "c"
+		}
+	}
+}

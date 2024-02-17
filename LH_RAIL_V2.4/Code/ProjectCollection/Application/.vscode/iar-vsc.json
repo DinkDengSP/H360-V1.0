@@ -1,0 +1,14 @@
+{
+  "ewp": "d:\\LH_Local\\02-Development\\Software\\H360_STM32\\LH_RAIL_V2.4\\Code\\ProjectCollection\\Application\\ProjectFiles\\RailAppV2.4.ewp",
+  "configuration": "Release",
+  "toolchain": "C:\\\\Program Files\\\\IAR Systems\\\\IAR ARM 9.3",
+  "project": {
+    "path": "${workspaceFolder}\\ProjectFiles\\RailAppV2.4.ewp"
+  },
+  "configs": {
+    "${workspaceFolder}\\ProjectFiles\\RailAppV2.4.ewp": "Release"
+  },
+  "workbench": {
+    "path": "C:\\\\Program Files\\\\IAR Systems\\\\IAR ARM 9.3"
+  }
+}

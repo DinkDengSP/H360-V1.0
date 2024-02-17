@@ -1,0 +1,14 @@
+{
+  "ewp": "${workspaceFolder}\\PorjectFiles\\H360_MidControl1.0_PHY_App.ewp",
+  "configuration": "Release",
+  "toolchain": "C:\\\\Program Files\\\\IAR Systems\\\\IAR ARM 9.3",
+  "project": {
+    "path": "${workspaceFolder}\\PorjectFiles\\H360_MidControl1.0_PHY_App.ewp"
+  },
+  "configs": {
+    "${workspaceFolder}\\PorjectFiles\\H360_MidControl1.0_PHY_App.ewp": "Release"
+  },
+  "workbench": {
+    "path": "C:\\\\Program Files\\\\IAR Systems\\\\IAR ARM 9.3"
+  }
+}

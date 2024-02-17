@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\..\\CommonFiles"
+		},
+		{
+			"path": "..\\..\\..\\Driver"
+		},
+		{
+			"path": "..\\..\\..\\FileX"
+		},
+		{
+			"path": "..\\..\\..\\ThreadX"
+		},
+		{
+			"path": "..\\..\\..\\NetXDUO"
+		}
+	],
+	"settings": {
+		"svn.ignoreMissingSvnWarning": true,
+		"files.associations": {
+			"mcu_mpu.h": "c",
+			"boardinc.h": "c"
+		}
+	}
+}

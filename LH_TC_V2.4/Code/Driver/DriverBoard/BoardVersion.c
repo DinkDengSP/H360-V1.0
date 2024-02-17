@@ -1,0 +1,52 @@
+/*******************************************************************
+**Description: Copyright(c) 2018-2025 LiHeBio,All rights reserved.
+**Author: DengXiaoJun
+**Date: 2021-08-04 08:57:26
+**LastEditors: DengXiaoJun
+**LastEditTime: 2021-08-04 08:59:56
+**ModifyRecord1:    
+**ModifyRecord2:    
+**ModifyRecord3:    
+**ModifyRecord4:    
+**ModifyRecord5:    
+******************************************************************/
+#include "BoardVersion.h"
+#include "BoardMB85RS2MT.h"
+
+//写入BOOT版本号
+void BoardVersion_WriteBootVersion(void)
+{
+    BOARD_BOOT_VERSION bootVersionCode = {0};
+    bootVersionCode.mainVersion = TC_BOARD_BOOT_VERSION_MAIN;
+    bootVersionCode.subVersion = TC_BOARD_BOOT_VERSION_SUB;
+    bootVersionCode.debugVersion = TC_BOARD_BOOT_VERSION_DEBUG;
+    bootVersionCode.svnVersion = VERSION_NUM_SVN;
+    //写入铁电存储器
+    BoardMB85RS2MT_WriteBuffer(BOARD_MB85RS2MT_BOOT_VERSION_REGION_MIN,(uint8_t*)(&bootVersionCode),LENGTH_BOARD_BOOT_VERSION);
+}
+
+//写入APP版本号
+void BoardVersion_WriteAppVersion(void)
+{
+    BOARD_APP_VERSION appVersionCode = {0};
+    appVersionCode.mainVersion = TC_BOARD_APP_VERSION_MAIN;
+    appVersionCode.subVersion = TC_BOARD_APP_VERSION_SUB;
+    appVersionCode.debugVersion = TC_BOARD_APP_VERSION_DEBUG;
+    appVersionCode.svnVersion = VERSION_NUM_SVN;
+    //写入铁电存储器
+    BoardMB85RS2MT_WriteBuffer(BOARD_MB85RS2MT_APP_VERSION_REGION_MIN,(uint8_t*)(&appVersionCode),LENGTH_BOARD_APP_VERSION);
+}
+
+//读取BOOT版本号
+void BoardVersion_ReadBootVersion(BOARD_BOOT_VERSION* bootVersion)
+{
+    //读取BOOT版本号
+    BoardMB85RS2MT_ReadBuffer(BOARD_MB85RS2MT_BOOT_VERSION_REGION_MIN,(uint8_t*)(bootVersion),LENGTH_BOARD_BOOT_VERSION);
+}
+
+//读取App版本号
+void BoardVersion_ReadAppVersion(BOARD_APP_VERSION* appVersion)
+{
+    //读取APP版本号
+    BoardMB85RS2MT_ReadBuffer(BOARD_MB85RS2MT_APP_VERSION_REGION_MIN,(uint8_t*)(appVersion),LENGTH_BOARD_APP_VERSION);
+}

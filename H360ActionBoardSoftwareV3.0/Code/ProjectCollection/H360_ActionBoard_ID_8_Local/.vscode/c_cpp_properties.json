@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/LH_Local/02-Development/Software/H360_STM32/H360ActionBoardSoftwareV3.0/**",
+                "C:/Program Files (x86)/IAR Systems/IAR ARM/arm/inc/c/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64",
+            "configurationProvider": "iarsystems.iar-build"
+        }
+    ],
+    "version": 4
+}

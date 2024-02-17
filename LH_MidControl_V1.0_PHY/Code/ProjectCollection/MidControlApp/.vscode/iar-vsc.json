@@ -1,0 +1,14 @@
+{
+  "ewp": "${workspaceFolder}\\ProjectFiles\\MidControlApp.ewp",
+  "configuration": "CI",
+  "toolchain": "C:\\\\Program Files\\\\IAR Systems\\\\IAR ARM 9.3",
+  "project": {
+    "path": "${workspaceFolder}\\ProjectFiles\\MidControlApp.ewp"
+  },
+  "configs": {
+    "${workspaceFolder}\\ProjectFiles\\MidControlApp.ewp": "CS"
+  },
+  "workbench": {
+    "path": "C:\\\\Program Files\\\\IAR Systems\\\\IAR ARM 9.3"
+  }
+}

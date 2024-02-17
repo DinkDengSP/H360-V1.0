@@ -1,0 +1,4 @@
+六针RS3 Uart2 试剂条码枪串口
+六针RS1 Uart3 动作Action调试信息串口
+四针RS2 Uart1 应用调试串口
+四针RS4 Uart6 光子检测串口   

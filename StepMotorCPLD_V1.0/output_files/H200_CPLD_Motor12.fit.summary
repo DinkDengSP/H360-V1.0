@@ -1,0 +1,11 @@
+Fitter Status : Successful - Tue Jun 25 09:16:32 2019
+Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
+Revision Name : H200_CPLD_Motor12
+Top-level Entity Name : H200_CPLD_Motor12
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 1,220 / 1,270 ( 96 % )
+Total pins : 112 / 116 ( 97 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

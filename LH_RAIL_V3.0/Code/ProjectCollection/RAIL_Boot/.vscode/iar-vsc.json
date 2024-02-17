@@ -1,0 +1,5 @@
+{
+    "ewp": "${workspaceFolder}\\ProjectFiles\\RailBoot.ewp",
+    "configuration": "H360S",
+    "toolchain": "C:\\\\Program Files\\\\IAR Systems\\\\IAR ARM 9.3"
+}

@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\..\\CommonFiles"
+		},
+		{
+			"path": "..\\..\\..\\Driver"
+		},
+		{
+			"path": "..\\..\\..\\ThreadX"
+		}
+	],
+	"settings": {
+		"svn.ignoreMissingSvnWarning": true
+	}
+}

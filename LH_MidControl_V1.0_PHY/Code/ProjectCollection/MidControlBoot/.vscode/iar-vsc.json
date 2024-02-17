@@ -1,0 +1,14 @@
+{
+  "ewp": "d:\\LH_Local\\02-Development\\Software\\H360_STM32\\LH_MidControl_V1.0_PHY\\Code\\ProjectCollection\\MidControlBoot\\ProjectFiles\\MidControlBoot.ewp",
+  "configuration": "CS",
+  "toolchain": "C:\\\\Program Files\\\\IAR Systems\\\\IAR ARM 9.3",
+  "workbench": {
+    "path": "C:\\\\Program Files\\\\IAR Systems\\\\IAR ARM 9.3"
+  },
+  "project": {
+    "path": "${workspaceFolder}\\ProjectFiles\\MidControlBoot.ewp"
+  },
+  "configs": {
+    "${workspaceFolder}\\ProjectFiles\\MidControlBoot.ewp": "CS"
+  }
+}

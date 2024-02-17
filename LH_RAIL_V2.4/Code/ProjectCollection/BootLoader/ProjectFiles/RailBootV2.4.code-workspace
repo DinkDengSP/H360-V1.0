@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\..\\Driver"
+		},
+		{
+			"path": "..\\..\\..\\UCOS_III"
+		},
+		{
+			"path": "..\\..\\..\\CommonFunc"
+		}
+	],
+	"settings": {}
+}

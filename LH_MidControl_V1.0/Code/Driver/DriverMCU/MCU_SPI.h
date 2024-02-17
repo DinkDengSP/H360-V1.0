@@ -1,0 +1,77 @@
+/*******************************************************************
+ *Description: Copyright(c) 2018-2025 LiHeBio,All rights reserved.
+ *Author: DengXiaoJun
+ *Date: 2021-08-03 14:52:55
+**LastEditors: DengXiaoJun
+**LastEditTime: 2021-08-03 16:46:09
+ *ModifyRecord1:    
+ *ModifyRecord2:    
+ *ModifyRecord3:    
+ *ModifyRecord4:    
+ *ModifyRecord5:    
+******************************************************************/
+#ifndef __MCU_SPI_H_
+#define __MCU_SPI_H_
+#include "CoreUtil.h"
+
+//SPI速度设定 PLLQ 120M输入主频
+typedef enum MCU_SPI_123_CLK
+{
+    SPI_123_BAUD_RATE_PRESCALER_50M         = SPI_BAUDRATEPRESCALER_2,/* 50M */
+    SPI_123_BAUD_RATE_PRESCALER_25M         = SPI_BAUDRATEPRESCALER_4,/* 25M */
+    SPI_123_BAUD_RATE_PRESCALER_12_5M       = SPI_BAUDRATEPRESCALER_8,/* 12.5M */
+    SPI_123_BAUD_RATE_PRESCALER_6_25_M      = SPI_BAUDRATEPRESCALER_16,/* 6.25M */
+    SPI_123_BAUD_RATE_PRESCALER_3_125_M     = SPI_BAUDRATEPRESCALER_32,/* 3.125M */
+    SPI_123_BAUD_RATE_PRESCALER_1_5625_M    = SPI_BAUDRATEPRESCALER_64,/* 1.5625M */
+    SPI_123_BAUD_RATE_PRESCALER_780K        = SPI_BAUDRATEPRESCALER_128,/* 780K */
+    SPI_123_BAUD_RATE_PRESCALER_390K        = SPI_BAUDRATEPRESCALER_256,/* 390K */
+}MCU_SPI_123_CLK;
+
+//SPI速度设定 APB2 120M输入主频
+typedef enum MCU_SPI_45_CLK
+{
+    SPI_45_BAUD_RATE_PRESCALER_50M       = SPI_BAUDRATEPRESCALER_2,/* 50M */
+    SPI_45_BAUD_RATE_PRESCALER_25M       = SPI_BAUDRATEPRESCALER_4,/* 25M */
+    SPI_45_BAUD_RATE_PRESCALER_12_5M     = SPI_BAUDRATEPRESCALER_8,/* 12.5M */
+    SPI_45_BAUD_RATE_PRESCALER_6_25_M    = SPI_BAUDRATEPRESCALER_16,/* 6.25M */
+    SPI_45_BAUD_RATE_PRESCALER_3_125_M   = SPI_BAUDRATEPRESCALER_32,/* 3.125M */
+    SPI_45_BAUD_RATE_PRESCALER_1_5625_M  = SPI_BAUDRATEPRESCALER_64,/* 1.5625M */
+    SPI_45_BAUD_RATE_PRESCALER_780K      = SPI_BAUDRATEPRESCALER_128,/* 780K */
+    SPI_45_BAUD_RATE_PRESCALER_390K      = SPI_BAUDRATEPRESCALER_256,/* 390K */
+}MCU_SPI_45_CLK;
+
+//SPI信号极性
+typedef enum MCU_SPI_CPOL
+{
+    MCU_SPI_CPOL_HIGH = SPI_POLARITY_HIGH,
+    MCU_SPI_CPOL_LOW = SPI_POLARITY_LOW,
+}MCU_SPI_CPOL;
+
+//SPI采样点设置
+typedef enum MCU_SPI_CPHA
+{
+    MCU_SPI_CPHA_1EDGE = SPI_PHASE_1EDGE,
+    MCU_SPI_CPHA_2EDGE = SPI_PHASE_2EDGE,
+}MCU_SPI_CPHA;
+
+//SPI2互斥信号量
+extern TX_MUTEX mutexMCU_SPI2;
+//SPI2初始化
+void MCU_SPI2_Init(MCU_SPI_123_CLK speed,MCU_SPI_CPOL cpol,MCU_SPI_CPHA cpha);
+//SPI2设定传输速度
+void MCU_SPI2_SetSpeed(MCU_SPI_123_CLK speed);
+//SPI2读写数据
+uint8_t MCU_SPI2_ReadWriteByte(uint8_t dat);
+
+
+//SPI5互斥信号量
+extern TX_MUTEX mutexMCU_SPI5;
+//SPI5初始化
+void MCU_SPI5_Init(MCU_SPI_45_CLK speed,MCU_SPI_CPOL cpol,MCU_SPI_CPHA cpha);
+//SPI5设定传输速度
+void MCU_SPI5_SetSpeed(MCU_SPI_45_CLK speed);
+//SPI5读写数据
+uint8_t MCU_SPI5_ReadWriteByte(uint8_t dat);
+
+
+#endif

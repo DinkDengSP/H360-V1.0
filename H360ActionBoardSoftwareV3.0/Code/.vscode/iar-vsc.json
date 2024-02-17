@@ -1,0 +1,21 @@
+{
+  "ewp": "${workspaceFolder}\\ProjectCollection\\H360_ActionBoard_Bootloader\\ProjectFiles\\H360_ActionBoard_Bootloader.ewp",
+  "configuration": "H360_Release",
+  "toolchain": "C:\\\\Program Files\\\\IAR Systems\\\\IAR ARM 9.3",
+  "workspace": {
+    "path": "${workspaceFolder}\\H360ActionBoardSoftwareV3.0.eww"
+  },
+  "workspaces": {
+    "${workspaceFolder}\\H360ActionBoardSoftwareV3.0.eww": {
+      "configs": {
+        "${workspaceFolder}\\ProjectCollection\\H360_ActionBoard_Bootloader\\ProjectFiles\\H360_ActionBoard_Bootloader.ewp": "H360_Release"
+      },
+      "selected": {
+        "path": "${workspaceFolder}\\ProjectCollection\\H360_ActionBoard_Bootloader\\ProjectFiles\\H360_ActionBoard_Bootloader.ewp"
+      }
+    }
+  },
+  "workbench": {
+    "path": "C:\\Program Files\\IAR Systems\\IAR ARM 9.3"
+  }
+}

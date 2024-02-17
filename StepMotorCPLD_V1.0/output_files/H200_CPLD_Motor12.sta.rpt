@@ -1,0 +1,1293 @@
+TimeQuest Timing Analyzer report for H200_CPLD_Motor12
+Tue Jun 25 09:16:41 2019
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'mainClk'
+ 12. Hold: 'mainClk'
+ 13. Minimum Pulse Width: 'mainClk'
+ 14. Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor10|register_need_write'
+ 15. Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor11|register_need_write'
+ 16. Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor12|register_need_write'
+ 17. Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor1|register_need_write'
+ 18. Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor2|register_need_write'
+ 19. Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor3|register_need_write'
+ 20. Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor4|register_need_write'
+ 21. Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor5|register_need_write'
+ 22. Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor6|register_need_write'
+ 23. Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor7|register_need_write'
+ 24. Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor8|register_need_write'
+ 25. Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor9|register_need_write'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Propagation Delay
+ 31. Minimum Propagation Delay
+ 32. Setup Transfers
+ 33. Hold Transfers
+ 34. Report TCCS
+ 35. Report RSKM
+ 36. Unconstrained Paths
+ 37. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                        ;
++--------------------+-----------------------------------------------------+
+; Quartus II Version ; Version 15.0.0 Build 145 04/22/2015 SJ Full Version ;
+; Revision Name      ; H200_CPLD_Motor12                                   ;
+; Device Family      ; MAX II                                              ;
+; Device Name        ; EPM1270T144C5                                       ;
+; Timing Models      ; Final                                               ;
+; Delay Model        ; Slow Model                                          ;
+; Rise/Fall Delays   ; Unavailable                                         ;
++--------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                               ;
++---------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------------------------+
+; Clock Name                                        ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                               ;
++---------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------------------------+
+; mainClk                                           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { mainClk }                                           ;
+; StepMotorWithDAcc:stepMotor1|register_need_write  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { StepMotorWithDAcc:stepMotor1|register_need_write }  ;
+; StepMotorWithDAcc:stepMotor2|register_need_write  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { StepMotorWithDAcc:stepMotor2|register_need_write }  ;
+; StepMotorWithDAcc:stepMotor3|register_need_write  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { StepMotorWithDAcc:stepMotor3|register_need_write }  ;
+; StepMotorWithDAcc:stepMotor4|register_need_write  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { StepMotorWithDAcc:stepMotor4|register_need_write }  ;
+; StepMotorWithDAcc:stepMotor5|register_need_write  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { StepMotorWithDAcc:stepMotor5|register_need_write }  ;
+; StepMotorWithDAcc:stepMotor6|register_need_write  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { StepMotorWithDAcc:stepMotor6|register_need_write }  ;
+; StepMotorWithDAcc:stepMotor7|register_need_write  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { StepMotorWithDAcc:stepMotor7|register_need_write }  ;
+; StepMotorWithDAcc:stepMotor8|register_need_write  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { StepMotorWithDAcc:stepMotor8|register_need_write }  ;
+; StepMotorWithDAcc:stepMotor9|register_need_write  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { StepMotorWithDAcc:stepMotor9|register_need_write }  ;
+; StepMotorWithDAcc:stepMotor10|register_need_write ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { StepMotorWithDAcc:stepMotor10|register_need_write } ;
+; StepMotorWithDAcc:stepMotor11|register_need_write ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { StepMotorWithDAcc:stepMotor11|register_need_write } ;
+; StepMotorWithDAcc:stepMotor12|register_need_write ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { StepMotorWithDAcc:stepMotor12|register_need_write } ;
++---------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------------------------+
+
+
++------------------------------------------------+
+; Fmax Summary                                   ;
++----------+-----------------+------------+------+
+; Fmax     ; Restricted Fmax ; Clock Name ; Note ;
++----------+-----------------+------------+------+
+; 81.3 MHz ; 81.3 MHz        ; mainClk    ;      ;
++----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------+
+; Setup Summary                     ;
++---------+---------+---------------+
+; Clock   ; Slack   ; End Point TNS ;
++---------+---------+---------------+
+; mainClk ; -11.300 ; -3959.832     ;
++---------+---------+---------------+
+
+
++---------------------------------+
+; Hold Summary                    ;
++---------+-------+---------------+
+; Clock   ; Slack ; End Point TNS ;
++---------+-------+---------------+
+; mainClk ; 1.640 ; 0.000         ;
++---------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++----------------------------------------------------------------------------+
+; Minimum Pulse Width Summary                                                ;
++---------------------------------------------------+--------+---------------+
+; Clock                                             ; Slack  ; End Point TNS ;
++---------------------------------------------------+--------+---------------+
+; mainClk                                           ; -2.289 ; -2.289        ;
+; StepMotorWithDAcc:stepMotor10|register_need_write ; 0.234  ; 0.000         ;
+; StepMotorWithDAcc:stepMotor11|register_need_write ; 0.234  ; 0.000         ;
+; StepMotorWithDAcc:stepMotor12|register_need_write ; 0.234  ; 0.000         ;
+; StepMotorWithDAcc:stepMotor1|register_need_write  ; 0.234  ; 0.000         ;
+; StepMotorWithDAcc:stepMotor2|register_need_write  ; 0.234  ; 0.000         ;
+; StepMotorWithDAcc:stepMotor3|register_need_write  ; 0.234  ; 0.000         ;
+; StepMotorWithDAcc:stepMotor4|register_need_write  ; 0.234  ; 0.000         ;
+; StepMotorWithDAcc:stepMotor5|register_need_write  ; 0.234  ; 0.000         ;
+; StepMotorWithDAcc:stepMotor6|register_need_write  ; 0.234  ; 0.000         ;
+; StepMotorWithDAcc:stepMotor7|register_need_write  ; 0.234  ; 0.000         ;
+; StepMotorWithDAcc:stepMotor8|register_need_write  ; 0.234  ; 0.000         ;
+; StepMotorWithDAcc:stepMotor9|register_need_write  ; 0.234  ; 0.000         ;
++---------------------------------------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'mainClk'                                                                                                                                                    ;
++---------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -11.300 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[4]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.967     ;
+; -11.300 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[3]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.967     ;
+; -11.300 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[6]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.967     ;
+; -11.300 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[5]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.967     ;
+; -11.300 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[7]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.967     ;
+; -11.300 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[2]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.967     ;
+; -11.300 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[0]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.967     ;
+; -11.300 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[1]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.967     ;
+; -11.286 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|counter[4]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.953     ;
+; -11.286 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|counter[3]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.953     ;
+; -11.286 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|counter[6]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.953     ;
+; -11.286 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|counter[5]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.953     ;
+; -11.286 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|counter[7]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.953     ;
+; -11.286 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|counter[2]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.953     ;
+; -11.286 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|counter[0]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.953     ;
+; -11.286 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|counter[1]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.953     ;
+; -11.262 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|counter[4]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.929     ;
+; -11.262 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|counter[3]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.929     ;
+; -11.262 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|counter[6]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.929     ;
+; -11.262 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|counter[5]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.929     ;
+; -11.262 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|counter[7]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.929     ;
+; -11.262 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|counter[2]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.929     ;
+; -11.262 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|counter[0]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.929     ;
+; -11.262 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|counter[1]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.929     ;
+; -11.163 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|counter[4]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.830     ;
+; -11.163 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|counter[3]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.830     ;
+; -11.163 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|counter[6]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.830     ;
+; -11.163 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|counter[5]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.830     ;
+; -11.163 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|counter[7]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.830     ;
+; -11.163 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|counter[2]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.830     ;
+; -11.163 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|counter[0]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.830     ;
+; -11.163 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|counter[1]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.830     ;
+; -11.108 ; StepMotorWithDAcc:stepMotor4|counter[8]  ; StepMotorWithDAcc:stepMotor4|counter[4]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.775     ;
+; -11.108 ; StepMotorWithDAcc:stepMotor4|counter[8]  ; StepMotorWithDAcc:stepMotor4|counter[3]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.775     ;
+; -11.108 ; StepMotorWithDAcc:stepMotor4|counter[8]  ; StepMotorWithDAcc:stepMotor4|counter[6]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.775     ;
+; -11.108 ; StepMotorWithDAcc:stepMotor4|counter[8]  ; StepMotorWithDAcc:stepMotor4|counter[5]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.775     ;
+; -11.108 ; StepMotorWithDAcc:stepMotor4|counter[8]  ; StepMotorWithDAcc:stepMotor4|counter[7]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.775     ;
+; -11.108 ; StepMotorWithDAcc:stepMotor4|counter[8]  ; StepMotorWithDAcc:stepMotor4|counter[2]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.775     ;
+; -11.108 ; StepMotorWithDAcc:stepMotor4|counter[8]  ; StepMotorWithDAcc:stepMotor4|counter[0]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.775     ;
+; -11.108 ; StepMotorWithDAcc:stepMotor4|counter[8]  ; StepMotorWithDAcc:stepMotor4|counter[1]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.775     ;
+; -11.079 ; StepMotorWithDAcc:stepMotor4|counter[5]  ; StepMotorWithDAcc:stepMotor4|counter[4]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.746     ;
+; -11.079 ; StepMotorWithDAcc:stepMotor4|counter[5]  ; StepMotorWithDAcc:stepMotor4|counter[3]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.746     ;
+; -11.079 ; StepMotorWithDAcc:stepMotor4|counter[5]  ; StepMotorWithDAcc:stepMotor4|counter[6]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.746     ;
+; -11.079 ; StepMotorWithDAcc:stepMotor4|counter[5]  ; StepMotorWithDAcc:stepMotor4|counter[5]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.746     ;
+; -11.079 ; StepMotorWithDAcc:stepMotor4|counter[5]  ; StepMotorWithDAcc:stepMotor4|counter[7]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.746     ;
+; -11.079 ; StepMotorWithDAcc:stepMotor4|counter[5]  ; StepMotorWithDAcc:stepMotor4|counter[2]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.746     ;
+; -11.079 ; StepMotorWithDAcc:stepMotor4|counter[5]  ; StepMotorWithDAcc:stepMotor4|counter[0]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.746     ;
+; -11.079 ; StepMotorWithDAcc:stepMotor4|counter[5]  ; StepMotorWithDAcc:stepMotor4|counter[1]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.746     ;
+; -11.034 ; StepMotorWithDAcc:stepMotor4|counter[4]  ; StepMotorWithDAcc:stepMotor4|counter[4]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.701     ;
+; -11.034 ; StepMotorWithDAcc:stepMotor4|counter[4]  ; StepMotorWithDAcc:stepMotor4|counter[3]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.701     ;
+; -11.034 ; StepMotorWithDAcc:stepMotor4|counter[4]  ; StepMotorWithDAcc:stepMotor4|counter[6]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.701     ;
+; -11.034 ; StepMotorWithDAcc:stepMotor4|counter[4]  ; StepMotorWithDAcc:stepMotor4|counter[5]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.701     ;
+; -11.034 ; StepMotorWithDAcc:stepMotor4|counter[4]  ; StepMotorWithDAcc:stepMotor4|counter[7]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.701     ;
+; -11.034 ; StepMotorWithDAcc:stepMotor4|counter[4]  ; StepMotorWithDAcc:stepMotor4|counter[2]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.701     ;
+; -11.034 ; StepMotorWithDAcc:stepMotor4|counter[4]  ; StepMotorWithDAcc:stepMotor4|counter[0]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.701     ;
+; -11.034 ; StepMotorWithDAcc:stepMotor4|counter[4]  ; StepMotorWithDAcc:stepMotor4|counter[1]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.701     ;
+; -11.018 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[8]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.685     ;
+; -11.018 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[7]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.685     ;
+; -11.018 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[6]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.685     ;
+; -11.018 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[5]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.685     ;
+; -11.018 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[4]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.685     ;
+; -11.018 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[3]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.685     ;
+; -11.018 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[2]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.685     ;
+; -11.018 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[1]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.685     ;
+; -11.004 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[8]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.671     ;
+; -11.004 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[7]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.671     ;
+; -11.004 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[6]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.671     ;
+; -11.004 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[5]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.671     ;
+; -11.004 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[4]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.671     ;
+; -11.004 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[3]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.671     ;
+; -11.004 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[2]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.671     ;
+; -11.004 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[1]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.671     ;
+; -10.980 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[8]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.647     ;
+; -10.980 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[7]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.647     ;
+; -10.980 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[6]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.647     ;
+; -10.980 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[5]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.647     ;
+; -10.980 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[4]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.647     ;
+; -10.980 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[3]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.647     ;
+; -10.980 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[2]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.647     ;
+; -10.980 ; StepMotorWithDAcc:stepMotor4|counter[6]  ; StepMotorWithDAcc:stepMotor4|pul_cnt[1]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.647     ;
+; -10.886 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[8]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.553     ;
+; -10.886 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[10] ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.553     ;
+; -10.886 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[9]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.553     ;
+; -10.886 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[12] ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.553     ;
+; -10.886 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[11] ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.553     ;
+; -10.886 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[14] ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.553     ;
+; -10.886 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[13] ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.553     ;
+; -10.886 ; StepMotorWithDAcc:stepMotor4|counter[3]  ; StepMotorWithDAcc:stepMotor4|counter[15] ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.553     ;
+; -10.881 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|pul_cnt[8]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.548     ;
+; -10.881 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|pul_cnt[7]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.548     ;
+; -10.881 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|pul_cnt[6]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.548     ;
+; -10.881 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|pul_cnt[5]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.548     ;
+; -10.881 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|pul_cnt[4]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.548     ;
+; -10.881 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|pul_cnt[3]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.548     ;
+; -10.881 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|pul_cnt[2]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.548     ;
+; -10.881 ; StepMotorWithDAcc:stepMotor4|counter[10] ; StepMotorWithDAcc:stepMotor4|pul_cnt[1]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.548     ;
+; -10.872 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|counter[8]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.539     ;
+; -10.872 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|counter[10] ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.539     ;
+; -10.872 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|counter[9]  ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.539     ;
+; -10.872 ; StepMotorWithDAcc:stepMotor4|counter[9]  ; StepMotorWithDAcc:stepMotor4|counter[12] ; mainClk      ; mainClk     ; 1.000        ; 0.000      ; 11.539     ;
++---------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'mainClk'                                                                                                                                                                                                    ;
++-------+-------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                         ; To Node                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.640 ; StepMotorWithDAcc:stepMotor4|pul_num_equal                        ; StepMotorWithDAcc:stepMotor4|pul_num_equal                       ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 1.861      ;
+; 1.640 ; StepMotorWithDAcc:stepMotor7|pul_cnt[0]                           ; StepMotorWithDAcc:stepMotor7|pul_cnt[0]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 1.861      ;
+; 1.653 ; FSMC_Interface:FSMC_InterfaceImplement|write_buf[3]               ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine11[3] ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 1.874      ;
+; 1.659 ; StepMotorWithDAcc:stepMotor5|pul_cnt[0]                           ; StepMotorWithDAcc:stepMotor5|pul_cnt[0]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 1.880      ;
+; 1.794 ; StepMotorWithDAcc:stepMotor8|pul_num_equal                        ; StepMotorWithDAcc:stepMotor8|pul_cnt[8]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.015      ;
+; 1.794 ; StepMotorWithDAcc:stepMotor8|pul_num_equal                        ; StepMotorWithDAcc:stepMotor8|pul_cnt[2]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.015      ;
+; 1.796 ; StepMotorWithDAcc:stepMotor8|pul_num_equal                        ; StepMotorWithDAcc:stepMotor8|pul_cnt[7]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.017      ;
+; 1.798 ; StepMotorWithDAcc:stepMotor8|pul_num_equal                        ; StepMotorWithDAcc:stepMotor8|pul_cnt[3]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.019      ;
+; 1.805 ; StepMotorWithDAcc:stepMotor8|pul_num_equal                        ; StepMotorWithDAcc:stepMotor8|pul_cnt[6]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.026      ;
+; 1.806 ; StepMotorWithDAcc:stepMotor8|pul_num_equal                        ; StepMotorWithDAcc:stepMotor8|pul_cnt[5]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.027      ;
+; 1.807 ; StepMotorWithDAcc:stepMotor8|pul_num_equal                        ; StepMotorWithDAcc:stepMotor8|pul_cnt[1]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.028      ;
+; 1.808 ; StepMotorWithDAcc:stepMotor8|pul_num_equal                        ; StepMotorWithDAcc:stepMotor8|pul_cnt[4]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.029      ;
+; 1.874 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine2[15]  ; StepMotorWithDAcc:stepMotor2|register_act[15]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.595      ;
+; 1.876 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine2[14]  ; StepMotorWithDAcc:stepMotor2|register_act[14]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.597      ;
+; 1.876 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine3[14]  ; StepMotorWithDAcc:stepMotor3|register_act[14]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.597      ;
+; 1.877 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine3[15]  ; StepMotorWithDAcc:stepMotor3|register_act[15]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.598      ;
+; 1.877 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine8[15]  ; StepMotorWithDAcc:stepMotor8|register_act[15]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.598      ;
+; 1.877 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[14] ; StepMotorWithDAcc:stepMotor10|register_act[14]                   ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.598      ;
+; 1.877 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine5[1]   ; StepMotorWithDAcc:stepMotor5|register_act[1]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.598      ;
+; 1.877 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine6[8]   ; StepMotorWithDAcc:stepMotor6|register_act[8]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.598      ;
+; 1.877 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine6[11]  ; StepMotorWithDAcc:stepMotor6|register_act[11]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.598      ;
+; 1.879 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine1[1]   ; StepMotorWithDAcc:stepMotor1|register_act[1]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.600      ;
+; 1.880 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine9[11]  ; StepMotorWithDAcc:stepMotor9|register_act[11]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.601      ;
+; 1.881 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine6[14]  ; StepMotorWithDAcc:stepMotor6|register_act[14]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.602      ;
+; 1.881 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine1[2]   ; StepMotorWithDAcc:stepMotor1|register_act[2]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.602      ;
+; 1.883 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine5[5]   ; StepMotorWithDAcc:stepMotor5|register_act[5]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.604      ;
+; 1.883 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine8[10]  ; StepMotorWithDAcc:stepMotor8|register_act[10]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.604      ;
+; 1.883 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine12[10] ; StepMotorWithDAcc:stepMotor12|register_act[10]                   ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.604      ;
+; 1.885 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine8[14]  ; StepMotorWithDAcc:stepMotor8|register_act[14]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.606      ;
+; 1.885 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine1[0]   ; StepMotorWithDAcc:stepMotor1|register_act[0]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.606      ;
+; 1.885 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine1[7]   ; StepMotorWithDAcc:stepMotor1|register_act[7]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.606      ;
+; 1.885 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine3[8]   ; StepMotorWithDAcc:stepMotor3|register_act[8]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.606      ;
+; 1.885 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[8]  ; StepMotorWithDAcc:stepMotor10|register_act[8]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.606      ;
+; 1.885 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[11] ; StepMotorWithDAcc:stepMotor10|register_act[11]                   ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.606      ;
+; 1.886 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine4[15]  ; StepMotorWithDAcc:stepMotor4|register_act[15]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.607      ;
+; 1.886 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine6[7]   ; StepMotorWithDAcc:stepMotor6|register_act[7]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.607      ;
+; 1.886 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine8[3]   ; StepMotorWithDAcc:stepMotor8|register_act[3]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.607      ;
+; 1.886 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine12[8]  ; StepMotorWithDAcc:stepMotor12|register_act[8]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.607      ;
+; 1.887 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine1[14]  ; StepMotorWithDAcc:stepMotor1|register_act[14]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.608      ;
+; 1.887 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine5[15]  ; StepMotorWithDAcc:stepMotor5|register_act[15]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.608      ;
+; 1.887 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine5[14]  ; StepMotorWithDAcc:stepMotor5|register_act[14]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.608      ;
+; 1.887 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine7[15]  ; StepMotorWithDAcc:stepMotor7|register_act[15]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.608      ;
+; 1.887 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine7[14]  ; StepMotorWithDAcc:stepMotor7|register_act[14]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.608      ;
+; 1.888 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine9[9]   ; StepMotorWithDAcc:stepMotor9|register_act[9]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.609      ;
+; 1.888 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[2]  ; StepMotorWithDAcc:stepMotor10|register_act[2]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.609      ;
+; 1.888 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine12[12] ; StepMotorWithDAcc:stepMotor12|register_act[12]                   ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.609      ;
+; 1.889 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine8[9]   ; StepMotorWithDAcc:stepMotor8|register_act[9]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.610      ;
+; 1.890 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine9[15]  ; StepMotorWithDAcc:stepMotor9|register_act[15]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.611      ;
+; 1.891 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine3[7]   ; StepMotorWithDAcc:stepMotor3|register_act[7]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.612      ;
+; 1.891 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine7[6]   ; StepMotorWithDAcc:stepMotor7|register_act[6]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.612      ;
+; 1.891 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine7[9]   ; StepMotorWithDAcc:stepMotor7|register_act[9]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.612      ;
+; 1.891 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine7[10]  ; StepMotorWithDAcc:stepMotor7|register_act[10]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.612      ;
+; 1.892 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine1[15]  ; StepMotorWithDAcc:stepMotor1|register_act[15]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.613      ;
+; 1.892 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine4[14]  ; StepMotorWithDAcc:stepMotor4|register_act[14]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.613      ;
+; 1.892 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine3[6]   ; StepMotorWithDAcc:stepMotor3|register_act[6]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.613      ;
+; 1.892 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine4[9]   ; StepMotorWithDAcc:stepMotor4|register_act[9]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.613      ;
+; 1.893 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[15] ; StepMotorWithDAcc:stepMotor10|register_act[15]                   ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.614      ;
+; 1.893 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine12[15] ; StepMotorWithDAcc:stepMotor12|register_act[15]                   ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.614      ;
+; 1.894 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine6[15]  ; StepMotorWithDAcc:stepMotor6|register_act[15]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.615      ;
+; 1.894 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine12[7]  ; StepMotorWithDAcc:stepMotor12|register_act[7]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.615      ;
+; 1.895 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine5[4]   ; StepMotorWithDAcc:stepMotor5|register_act[4]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.616      ;
+; 1.895 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine7[11]  ; StepMotorWithDAcc:stepMotor7|register_act[11]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.616      ;
+; 1.895 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine11[4]  ; StepMotorWithDAcc:stepMotor11|register_act[4]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.616      ;
+; 1.895 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine11[8]  ; StepMotorWithDAcc:stepMotor11|register_act[8]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.616      ;
+; 1.896 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine11[14] ; StepMotorWithDAcc:stepMotor11|register_act[14]                   ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.617      ;
+; 1.896 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine7[8]   ; StepMotorWithDAcc:stepMotor7|register_act[8]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.617      ;
+; 1.896 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine11[7]  ; StepMotorWithDAcc:stepMotor11|register_act[7]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.617      ;
+; 1.897 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine5[8]   ; StepMotorWithDAcc:stepMotor5|register_act[8]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.618      ;
+; 1.897 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine6[1]   ; StepMotorWithDAcc:stepMotor6|register_act[1]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.618      ;
+; 1.897 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine6[6]   ; StepMotorWithDAcc:stepMotor6|register_act[6]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.618      ;
+; 1.897 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine9[10]  ; StepMotorWithDAcc:stepMotor9|register_act[10]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.618      ;
+; 1.898 ; StepMotorWithDAcc:stepMotor6|pul_cnt[0]                           ; StepMotorWithDAcc:stepMotor6|pul_cnt[0]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.119      ;
+; 1.898 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine9[14]  ; StepMotorWithDAcc:stepMotor9|register_act[14]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.619      ;
+; 1.898 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine9[7]   ; StepMotorWithDAcc:stepMotor9|register_act[7]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.619      ;
+; 1.898 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine12[6]  ; StepMotorWithDAcc:stepMotor12|register_act[6]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.619      ;
+; 1.899 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine12[14] ; StepMotorWithDAcc:stepMotor12|register_act[14]                   ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.620      ;
+; 1.899 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine6[0]   ; StepMotorWithDAcc:stepMotor6|register_act[0]                     ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.620      ;
+; 1.901 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine11[15] ; StepMotorWithDAcc:stepMotor11|register_act[15]                   ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.622      ;
+; 1.901 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine2[10]  ; StepMotorWithDAcc:stepMotor2|register_act[10]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.622      ;
+; 1.901 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine11[0]  ; StepMotorWithDAcc:stepMotor11|register_act[0]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.622      ;
+; 1.901 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine12[0]  ; StepMotorWithDAcc:stepMotor12|register_act[0]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.622      ;
+; 1.902 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine11[12] ; StepMotorWithDAcc:stepMotor11|register_act[12]                   ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.623      ;
+; 1.903 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine2[13]  ; StepMotorWithDAcc:stepMotor2|register_act[13]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.624      ;
+; 1.903 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine3[13]  ; StepMotorWithDAcc:stepMotor3|register_act[13]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.624      ;
+; 1.904 ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine12[4]  ; StepMotorWithDAcc:stepMotor12|register_act[4]                    ; mainClk      ; mainClk     ; -0.500       ; 0.000      ; 1.625      ;
+; 1.908 ; StepMotorWithDAcc:stepMotor10|out                                 ; StepMotorWithDAcc:stepMotor10|out                                ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.129      ;
+; 1.908 ; StepMotorWithDAcc:stepMotor3|pul_cnt[0]                           ; StepMotorWithDAcc:stepMotor3|pul_cnt[0]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.129      ;
+; 2.107 ; StepMotorWithDAcc:stepMotor6|out                                  ; StepMotorWithDAcc:stepMotor6|out                                 ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.328      ;
+; 2.107 ; StepMotorWithDAcc:stepMotor12|pul_num_equal                       ; StepMotorWithDAcc:stepMotor12|pul_num_equal                      ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.328      ;
+; 2.107 ; StepMotorWithDAcc:stepMotor12|counter[10]                         ; StepMotorWithDAcc:stepMotor12|counter[10]                        ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.328      ;
+; 2.107 ; StepMotorWithDAcc:stepMotor9|pul_cnt[0]                           ; StepMotorWithDAcc:stepMotor9|pul_cnt[0]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.328      ;
+; 2.108 ; StepMotorWithDAcc:stepMotor1|counter[5]                           ; StepMotorWithDAcc:stepMotor1|counter[5]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.329      ;
+; 2.108 ; StepMotorWithDAcc:stepMotor4|counter[5]                           ; StepMotorWithDAcc:stepMotor4|counter[5]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.329      ;
+; 2.108 ; StepMotorWithDAcc:stepMotor7|counter[5]                           ; StepMotorWithDAcc:stepMotor7|counter[5]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.329      ;
+; 2.108 ; StepMotorWithDAcc:stepMotor9|counter[5]                           ; StepMotorWithDAcc:stepMotor9|counter[5]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.329      ;
+; 2.108 ; StepMotorWithDAcc:stepMotor10|counter[5]                          ; StepMotorWithDAcc:stepMotor10|counter[5]                         ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.329      ;
+; 2.108 ; StepMotorWithDAcc:stepMotor12|counter[5]                          ; StepMotorWithDAcc:stepMotor12|counter[5]                         ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.329      ;
+; 2.116 ; StepMotorWithDAcc:stepMotor1|counter[8]                           ; StepMotorWithDAcc:stepMotor1|counter[8]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; StepMotorWithDAcc:stepMotor2|counter[8]                           ; StepMotorWithDAcc:stepMotor2|counter[8]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; StepMotorWithDAcc:stepMotor4|counter[8]                           ; StepMotorWithDAcc:stepMotor4|counter[8]                          ; mainClk      ; mainClk     ; 0.000        ; 0.000      ; 2.337      ;
++-------+-------------------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'mainClk'                                                                                                                       ;
++--------+--------------+----------------+------------------+---------+------------+-------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target                                                            ;
++--------+--------------+----------------+------------------+---------+------------+-------------------------------------------------------------------+
+; -2.289 ; 1.000        ; 3.289          ; Port Rate        ; mainClk ; Rise       ; mainClk                                                           ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[0]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[0]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[1]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[1]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[2]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[2]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[3]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[3]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[4]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[4]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[5]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[5]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[6]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[6]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[7]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcA[7]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[0]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[0]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[1]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[1]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[2]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[2]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[3]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[3]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[4]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[4]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[5]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[5]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[6]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[6]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[7]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcB[7]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[0]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[0]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[1]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[1]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[2]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[2]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[3]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[3]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[4]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[4]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[5]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[5]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[6]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[6]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[7]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcC[7]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[0]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[0]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[1]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[1]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[2]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[2]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[3]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[3]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[4]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[4]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[5]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[5]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[6]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[6]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[7]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcD[7]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcE[0]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcE[0]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcE[1]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcE[1]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcE[2]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcE[2]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcE[3]                    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|cdcE[3]                    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[0]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[0]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[10] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[10] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[11] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[11] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[12] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[12] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[13] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[13] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[14] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[14] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[15] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[15] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[1]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[1]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[2]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[2]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[3]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[3]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[4]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[4]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[5]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[5]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[6]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[6]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; mainClk ; Fall       ; FSMC_Interface:FSMC_InterfaceImplement|stepMotorControlLine10[7]  ;
++--------+--------------+----------------+------------------+---------+------------+-------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor10|register_need_write'                                                                                           ;
++-------+--------------+----------------+------------------+---------------------------------------------------+------------+----------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                                             ; Clock Edge ; Target                                 ;
++-------+--------------+----------------+------------------+---------------------------------------------------+------------+----------------------------------------+
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; StepMotorWithDAcc:stepMotor10|register_need_write ; Rise       ; interrupt[9]                           ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor10|register_need_write ; Rise       ; interrupt[9]                           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor10|register_need_write ; Rise       ; interrupt[9]|clk                       ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor10|register_need_write ; Rise       ; interrupt[9]|clk                       ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor10|register_need_write ; Rise       ; stepMotor10|register_need_write|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor10|register_need_write ; Rise       ; stepMotor10|register_need_write|regout ;
++-------+--------------+----------------+------------------+---------------------------------------------------+------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor11|register_need_write'                                                                                           ;
++-------+--------------+----------------+------------------+---------------------------------------------------+------------+----------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                                             ; Clock Edge ; Target                                 ;
++-------+--------------+----------------+------------------+---------------------------------------------------+------------+----------------------------------------+
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; StepMotorWithDAcc:stepMotor11|register_need_write ; Rise       ; interrupt[10]                          ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor11|register_need_write ; Rise       ; interrupt[10]                          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor11|register_need_write ; Rise       ; interrupt[10]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor11|register_need_write ; Rise       ; interrupt[10]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor11|register_need_write ; Rise       ; stepMotor11|register_need_write|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor11|register_need_write ; Rise       ; stepMotor11|register_need_write|regout ;
++-------+--------------+----------------+------------------+---------------------------------------------------+------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor12|register_need_write'                                                                                           ;
++-------+--------------+----------------+------------------+---------------------------------------------------+------------+----------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                                             ; Clock Edge ; Target                                 ;
++-------+--------------+----------------+------------------+---------------------------------------------------+------------+----------------------------------------+
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; StepMotorWithDAcc:stepMotor12|register_need_write ; Rise       ; interrupt[11]                          ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor12|register_need_write ; Rise       ; interrupt[11]                          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor12|register_need_write ; Rise       ; interrupt[11]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor12|register_need_write ; Rise       ; interrupt[11]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor12|register_need_write ; Rise       ; stepMotor12|register_need_write|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor12|register_need_write ; Rise       ; stepMotor12|register_need_write|regout ;
++-------+--------------+----------------+------------------+---------------------------------------------------+------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor1|register_need_write'                                                                                          ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                                            ; Clock Edge ; Target                                ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; StepMotorWithDAcc:stepMotor1|register_need_write ; Rise       ; interrupt[0]                          ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor1|register_need_write ; Rise       ; interrupt[0]                          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor1|register_need_write ; Rise       ; interrupt[0]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor1|register_need_write ; Rise       ; interrupt[0]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor1|register_need_write ; Rise       ; stepMotor1|register_need_write|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor1|register_need_write ; Rise       ; stepMotor1|register_need_write|regout ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor2|register_need_write'                                                                                          ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                                            ; Clock Edge ; Target                                ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; StepMotorWithDAcc:stepMotor2|register_need_write ; Rise       ; interrupt[1]                          ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor2|register_need_write ; Rise       ; interrupt[1]                          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor2|register_need_write ; Rise       ; interrupt[1]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor2|register_need_write ; Rise       ; interrupt[1]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor2|register_need_write ; Rise       ; stepMotor2|register_need_write|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor2|register_need_write ; Rise       ; stepMotor2|register_need_write|regout ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor3|register_need_write'                                                                                          ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                                            ; Clock Edge ; Target                                ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; StepMotorWithDAcc:stepMotor3|register_need_write ; Rise       ; interrupt[2]                          ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor3|register_need_write ; Rise       ; interrupt[2]                          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor3|register_need_write ; Rise       ; interrupt[2]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor3|register_need_write ; Rise       ; interrupt[2]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor3|register_need_write ; Rise       ; stepMotor3|register_need_write|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor3|register_need_write ; Rise       ; stepMotor3|register_need_write|regout ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor4|register_need_write'                                                                                          ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                                            ; Clock Edge ; Target                                ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; StepMotorWithDAcc:stepMotor4|register_need_write ; Rise       ; interrupt[3]                          ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor4|register_need_write ; Rise       ; interrupt[3]                          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor4|register_need_write ; Rise       ; interrupt[3]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor4|register_need_write ; Rise       ; interrupt[3]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor4|register_need_write ; Rise       ; stepMotor4|register_need_write|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor4|register_need_write ; Rise       ; stepMotor4|register_need_write|regout ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor5|register_need_write'                                                                                          ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                                            ; Clock Edge ; Target                                ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; StepMotorWithDAcc:stepMotor5|register_need_write ; Rise       ; interrupt[4]                          ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor5|register_need_write ; Rise       ; interrupt[4]                          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor5|register_need_write ; Rise       ; interrupt[4]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor5|register_need_write ; Rise       ; interrupt[4]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor5|register_need_write ; Rise       ; stepMotor5|register_need_write|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor5|register_need_write ; Rise       ; stepMotor5|register_need_write|regout ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor6|register_need_write'                                                                                          ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                                            ; Clock Edge ; Target                                ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; StepMotorWithDAcc:stepMotor6|register_need_write ; Rise       ; interrupt[5]                          ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor6|register_need_write ; Rise       ; interrupt[5]                          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor6|register_need_write ; Rise       ; interrupt[5]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor6|register_need_write ; Rise       ; interrupt[5]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor6|register_need_write ; Rise       ; stepMotor6|register_need_write|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor6|register_need_write ; Rise       ; stepMotor6|register_need_write|regout ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor7|register_need_write'                                                                                          ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                                            ; Clock Edge ; Target                                ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; StepMotorWithDAcc:stepMotor7|register_need_write ; Rise       ; interrupt[6]                          ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor7|register_need_write ; Rise       ; interrupt[6]                          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor7|register_need_write ; Rise       ; interrupt[6]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor7|register_need_write ; Rise       ; interrupt[6]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor7|register_need_write ; Rise       ; stepMotor7|register_need_write|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor7|register_need_write ; Rise       ; stepMotor7|register_need_write|regout ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor8|register_need_write'                                                                                          ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                                            ; Clock Edge ; Target                                ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; StepMotorWithDAcc:stepMotor8|register_need_write ; Rise       ; interrupt[7]                          ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor8|register_need_write ; Rise       ; interrupt[7]                          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor8|register_need_write ; Rise       ; interrupt[7]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor8|register_need_write ; Rise       ; interrupt[7]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor8|register_need_write ; Rise       ; stepMotor8|register_need_write|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor8|register_need_write ; Rise       ; stepMotor8|register_need_write|regout ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'StepMotorWithDAcc:stepMotor9|register_need_write'                                                                                          ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                                            ; Clock Edge ; Target                                ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; StepMotorWithDAcc:stepMotor9|register_need_write ; Rise       ; interrupt[8]                          ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor9|register_need_write ; Rise       ; interrupt[8]                          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor9|register_need_write ; Rise       ; interrupt[8]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor9|register_need_write ; Rise       ; interrupt[8]|clk                      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; StepMotorWithDAcc:stepMotor9|register_need_write ; Rise       ; stepMotor9|register_need_write|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; StepMotorWithDAcc:stepMotor9|register_need_write ; Rise       ; stepMotor9|register_need_write|regout ;
++-------+--------------+----------------+------------------+--------------------------------------------------+------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset_n   ; mainClk    ; 5.287  ; 5.287  ; Rise       ; mainClk         ;
+; addr[*]   ; mainClk    ; 15.899 ; 15.899 ; Fall       ; mainClk         ;
+;  addr[0]  ; mainClk    ; 11.925 ; 11.925 ; Fall       ; mainClk         ;
+;  addr[1]  ; mainClk    ; 12.203 ; 12.203 ; Fall       ; mainClk         ;
+;  addr[2]  ; mainClk    ; 9.406  ; 9.406  ; Fall       ; mainClk         ;
+;  addr[3]  ; mainClk    ; 9.343  ; 9.343  ; Fall       ; mainClk         ;
+;  addr[4]  ; mainClk    ; 9.029  ; 9.029  ; Fall       ; mainClk         ;
+;  addr[5]  ; mainClk    ; 15.508 ; 15.508 ; Fall       ; mainClk         ;
+;  addr[6]  ; mainClk    ; 15.189 ; 15.189 ; Fall       ; mainClk         ;
+;  addr[7]  ; mainClk    ; 15.899 ; 15.899 ; Fall       ; mainClk         ;
+; data[*]   ; mainClk    ; 5.438  ; 5.438  ; Fall       ; mainClk         ;
+;  data[0]  ; mainClk    ; 3.945  ; 3.945  ; Fall       ; mainClk         ;
+;  data[1]  ; mainClk    ; 5.290  ; 5.290  ; Fall       ; mainClk         ;
+;  data[2]  ; mainClk    ; 4.770  ; 4.770  ; Fall       ; mainClk         ;
+;  data[3]  ; mainClk    ; 5.438  ; 5.438  ; Fall       ; mainClk         ;
+;  data[4]  ; mainClk    ; 5.434  ; 5.434  ; Fall       ; mainClk         ;
+;  data[5]  ; mainClk    ; 3.965  ; 3.965  ; Fall       ; mainClk         ;
+;  data[6]  ; mainClk    ; 4.783  ; 4.783  ; Fall       ; mainClk         ;
+;  data[7]  ; mainClk    ; 4.570  ; 4.570  ; Fall       ; mainClk         ;
+; reset_n   ; mainClk    ; 4.554  ; 4.554  ; Fall       ; mainClk         ;
+; select_n  ; mainClk    ; 14.416 ; 14.416 ; Fall       ; mainClk         ;
+; write_n   ; mainClk    ; 13.733 ; 13.733 ; Fall       ; mainClk         ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset_n   ; mainClk    ; -2.232 ; -2.232 ; Rise       ; mainClk         ;
+; addr[*]   ; mainClk    ; -2.262 ; -2.262 ; Fall       ; mainClk         ;
+;  addr[0]  ; mainClk    ; -5.079 ; -5.079 ; Fall       ; mainClk         ;
+;  addr[1]  ; mainClk    ; -5.358 ; -5.358 ; Fall       ; mainClk         ;
+;  addr[2]  ; mainClk    ; -2.262 ; -2.262 ; Fall       ; mainClk         ;
+;  addr[3]  ; mainClk    ; -2.486 ; -2.486 ; Fall       ; mainClk         ;
+;  addr[4]  ; mainClk    ; -3.454 ; -3.454 ; Fall       ; mainClk         ;
+;  addr[5]  ; mainClk    ; -7.313 ; -7.313 ; Fall       ; mainClk         ;
+;  addr[6]  ; mainClk    ; -6.994 ; -6.994 ; Fall       ; mainClk         ;
+;  addr[7]  ; mainClk    ; -7.704 ; -7.704 ; Fall       ; mainClk         ;
+; data[*]   ; mainClk    ; -1.186 ; -1.186 ; Fall       ; mainClk         ;
+;  data[0]  ; mainClk    ; -1.195 ; -1.195 ; Fall       ; mainClk         ;
+;  data[1]  ; mainClk    ; -1.209 ; -1.209 ; Fall       ; mainClk         ;
+;  data[2]  ; mainClk    ; -1.186 ; -1.186 ; Fall       ; mainClk         ;
+;  data[3]  ; mainClk    ; -1.227 ; -1.227 ; Fall       ; mainClk         ;
+;  data[4]  ; mainClk    ; -1.381 ; -1.381 ; Fall       ; mainClk         ;
+;  data[5]  ; mainClk    ; -1.255 ; -1.255 ; Fall       ; mainClk         ;
+;  data[6]  ; mainClk    ; -1.207 ; -1.207 ; Fall       ; mainClk         ;
+;  data[7]  ; mainClk    ; -1.290 ; -1.290 ; Fall       ; mainClk         ;
+; reset_n   ; mainClk    ; -4.000 ; -4.000 ; Fall       ; mainClk         ;
+; select_n  ; mainClk    ; -6.221 ; -6.221 ; Fall       ; mainClk         ;
+; write_n   ; mainClk    ; -5.538 ; -5.538 ; Fall       ; mainClk         ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                                                 ;
++----------------+---------------------------------------------------+--------+--------+------------+---------------------------------------------------+
+; Data Port      ; Clock Port                                        ; Rise   ; Fall   ; Clock Edge ; Clock Reference                                   ;
++----------------+---------------------------------------------------+--------+--------+------------+---------------------------------------------------+
+; data[*]        ; StepMotorWithDAcc:stepMotor10|register_need_write ; 13.127 ; 13.127 ; Rise       ; StepMotorWithDAcc:stepMotor10|register_need_write ;
+;  data[1]       ; StepMotorWithDAcc:stepMotor10|register_need_write ; 13.127 ; 13.127 ; Rise       ; StepMotorWithDAcc:stepMotor10|register_need_write ;
+; int1           ; StepMotorWithDAcc:stepMotor10|register_need_write ; 11.095 ; 11.095 ; Rise       ; StepMotorWithDAcc:stepMotor10|register_need_write ;
+; data[*]        ; StepMotorWithDAcc:stepMotor11|register_need_write ; 12.902 ; 12.902 ; Rise       ; StepMotorWithDAcc:stepMotor11|register_need_write ;
+;  data[2]       ; StepMotorWithDAcc:stepMotor11|register_need_write ; 12.902 ; 12.902 ; Rise       ; StepMotorWithDAcc:stepMotor11|register_need_write ;
+; int1           ; StepMotorWithDAcc:stepMotor11|register_need_write ; 12.560 ; 12.560 ; Rise       ; StepMotorWithDAcc:stepMotor11|register_need_write ;
+; data[*]        ; StepMotorWithDAcc:stepMotor12|register_need_write ; 12.286 ; 12.286 ; Rise       ; StepMotorWithDAcc:stepMotor12|register_need_write ;
+;  data[3]       ; StepMotorWithDAcc:stepMotor12|register_need_write ; 12.286 ; 12.286 ; Rise       ; StepMotorWithDAcc:stepMotor12|register_need_write ;
+; int1           ; StepMotorWithDAcc:stepMotor12|register_need_write ; 11.569 ; 11.569 ; Rise       ; StepMotorWithDAcc:stepMotor12|register_need_write ;
+; data[*]        ; StepMotorWithDAcc:stepMotor1|register_need_write  ; 13.391 ; 13.391 ; Rise       ; StepMotorWithDAcc:stepMotor1|register_need_write  ;
+;  data[0]       ; StepMotorWithDAcc:stepMotor1|register_need_write  ; 13.391 ; 13.391 ; Rise       ; StepMotorWithDAcc:stepMotor1|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor1|register_need_write  ; 12.243 ; 12.243 ; Rise       ; StepMotorWithDAcc:stepMotor1|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor2|register_need_write  ; 12.447 ; 12.447 ; Rise       ; StepMotorWithDAcc:stepMotor2|register_need_write  ;
+;  data[1]       ; StepMotorWithDAcc:stepMotor2|register_need_write  ; 12.447 ; 12.447 ; Rise       ; StepMotorWithDAcc:stepMotor2|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor2|register_need_write  ; 9.697  ; 9.697  ; Rise       ; StepMotorWithDAcc:stepMotor2|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor3|register_need_write  ; 12.865 ; 12.865 ; Rise       ; StepMotorWithDAcc:stepMotor3|register_need_write  ;
+;  data[2]       ; StepMotorWithDAcc:stepMotor3|register_need_write  ; 12.865 ; 12.865 ; Rise       ; StepMotorWithDAcc:stepMotor3|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor3|register_need_write  ; 11.044 ; 11.044 ; Rise       ; StepMotorWithDAcc:stepMotor3|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor4|register_need_write  ; 11.688 ; 11.688 ; Rise       ; StepMotorWithDAcc:stepMotor4|register_need_write  ;
+;  data[3]       ; StepMotorWithDAcc:stepMotor4|register_need_write  ; 11.688 ; 11.688 ; Rise       ; StepMotorWithDAcc:stepMotor4|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor4|register_need_write  ; 9.344  ; 9.344  ; Rise       ; StepMotorWithDAcc:stepMotor4|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor5|register_need_write  ; 10.590 ; 10.590 ; Rise       ; StepMotorWithDAcc:stepMotor5|register_need_write  ;
+;  data[4]       ; StepMotorWithDAcc:stepMotor5|register_need_write  ; 10.590 ; 10.590 ; Rise       ; StepMotorWithDAcc:stepMotor5|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor5|register_need_write  ; 11.363 ; 11.363 ; Rise       ; StepMotorWithDAcc:stepMotor5|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor6|register_need_write  ; 8.780  ; 8.780  ; Rise       ; StepMotorWithDAcc:stepMotor6|register_need_write  ;
+;  data[5]       ; StepMotorWithDAcc:stepMotor6|register_need_write  ; 8.780  ; 8.780  ; Rise       ; StepMotorWithDAcc:stepMotor6|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor6|register_need_write  ; 11.530 ; 11.530 ; Rise       ; StepMotorWithDAcc:stepMotor6|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor7|register_need_write  ; 10.265 ; 10.265 ; Rise       ; StepMotorWithDAcc:stepMotor7|register_need_write  ;
+;  data[6]       ; StepMotorWithDAcc:stepMotor7|register_need_write  ; 10.265 ; 10.265 ; Rise       ; StepMotorWithDAcc:stepMotor7|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor7|register_need_write  ; 10.661 ; 10.661 ; Rise       ; StepMotorWithDAcc:stepMotor7|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor8|register_need_write  ; 10.274 ; 10.274 ; Rise       ; StepMotorWithDAcc:stepMotor8|register_need_write  ;
+;  data[7]       ; StepMotorWithDAcc:stepMotor8|register_need_write  ; 10.274 ; 10.274 ; Rise       ; StepMotorWithDAcc:stepMotor8|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor8|register_need_write  ; 11.200 ; 11.200 ; Rise       ; StepMotorWithDAcc:stepMotor8|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor9|register_need_write  ; 12.410 ; 12.410 ; Rise       ; StepMotorWithDAcc:stepMotor9|register_need_write  ;
+;  data[0]       ; StepMotorWithDAcc:stepMotor9|register_need_write  ; 12.410 ; 12.410 ; Rise       ; StepMotorWithDAcc:stepMotor9|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor9|register_need_write  ; 10.237 ; 10.237 ; Rise       ; StepMotorWithDAcc:stepMotor9|register_need_write  ;
+; stemMotor1PWM  ; mainClk                                           ; 10.247 ; 10.247 ; Rise       ; mainClk                                           ;
+; stemMotor2PWM  ; mainClk                                           ; 9.021  ; 9.021  ; Rise       ; mainClk                                           ;
+; stemMotor3PWM  ; mainClk                                           ; 10.257 ; 10.257 ; Rise       ; mainClk                                           ;
+; stemMotor4PWM  ; mainClk                                           ; 9.169  ; 9.169  ; Rise       ; mainClk                                           ;
+; stemMotor5PWM  ; mainClk                                           ; 10.865 ; 10.865 ; Rise       ; mainClk                                           ;
+; stemMotor6PWM  ; mainClk                                           ; 8.380  ; 8.380  ; Rise       ; mainClk                                           ;
+; stemMotor7PWM  ; mainClk                                           ; 9.755  ; 9.755  ; Rise       ; mainClk                                           ;
+; stemMotor8PWM  ; mainClk                                           ; 10.969 ; 10.969 ; Rise       ; mainClk                                           ;
+; stemMotor9PWM  ; mainClk                                           ; 9.436  ; 9.436  ; Rise       ; mainClk                                           ;
+; stemMotor10PWM ; mainClk                                           ; 8.525  ; 8.525  ; Rise       ; mainClk                                           ;
+; stemMotor11PWM ; mainClk                                           ; 9.706  ; 9.706  ; Rise       ; mainClk                                           ;
+; stemMotor12PWM ; mainClk                                           ; 10.427 ; 10.427 ; Rise       ; mainClk                                           ;
+; stepMotor1Dir  ; mainClk                                           ; 7.291  ; 7.291  ; Rise       ; mainClk                                           ;
+; stepMotor1En   ; mainClk                                           ; 7.291  ; 7.291  ; Rise       ; mainClk                                           ;
+; stepMotor2Dir  ; mainClk                                           ; 8.990  ; 8.990  ; Rise       ; mainClk                                           ;
+; stepMotor2En   ; mainClk                                           ; 9.073  ; 9.073  ; Rise       ; mainClk                                           ;
+; stepMotor3Dir  ; mainClk                                           ; 10.575 ; 10.575 ; Rise       ; mainClk                                           ;
+; stepMotor3En   ; mainClk                                           ; 9.987  ; 9.987  ; Rise       ; mainClk                                           ;
+; stepMotor4Dir  ; mainClk                                           ; 9.240  ; 9.240  ; Rise       ; mainClk                                           ;
+; stepMotor4En   ; mainClk                                           ; 9.350  ; 9.350  ; Rise       ; mainClk                                           ;
+; stepMotor5Dir  ; mainClk                                           ; 9.746  ; 9.746  ; Rise       ; mainClk                                           ;
+; stepMotor5En   ; mainClk                                           ; 9.831  ; 9.831  ; Rise       ; mainClk                                           ;
+; stepMotor6Dir  ; mainClk                                           ; 9.358  ; 9.358  ; Rise       ; mainClk                                           ;
+; stepMotor6En   ; mainClk                                           ; 8.685  ; 8.685  ; Rise       ; mainClk                                           ;
+; stepMotor7Dir  ; mainClk                                           ; 9.483  ; 9.483  ; Rise       ; mainClk                                           ;
+; stepMotor7En   ; mainClk                                           ; 10.117 ; 10.117 ; Rise       ; mainClk                                           ;
+; stepMotor8Dir  ; mainClk                                           ; 10.406 ; 10.406 ; Rise       ; mainClk                                           ;
+; stepMotor8En   ; mainClk                                           ; 10.115 ; 10.115 ; Rise       ; mainClk                                           ;
+; stepMotor9Dir  ; mainClk                                           ; 10.313 ; 10.313 ; Rise       ; mainClk                                           ;
+; stepMotor9En   ; mainClk                                           ; 9.308  ; 9.308  ; Rise       ; mainClk                                           ;
+; stepMotor10Dir ; mainClk                                           ; 9.139  ; 9.139  ; Rise       ; mainClk                                           ;
+; stepMotor10En  ; mainClk                                           ; 9.143  ; 9.143  ; Rise       ; mainClk                                           ;
+; stepMotor11Dir ; mainClk                                           ; 9.054  ; 9.054  ; Rise       ; mainClk                                           ;
+; stepMotor11En  ; mainClk                                           ; 9.707  ; 9.707  ; Rise       ; mainClk                                           ;
+; stepMotor12Dir ; mainClk                                           ; 10.795 ; 10.795 ; Rise       ; mainClk                                           ;
+; stepMotor12En  ; mainClk                                           ; 11.085 ; 11.085 ; Rise       ; mainClk                                           ;
+; cdcA[*]        ; mainClk                                           ; 8.790  ; 8.790  ; Fall       ; mainClk                                           ;
+;  cdcA[0]       ; mainClk                                           ; 8.790  ; 8.790  ; Fall       ; mainClk                                           ;
+;  cdcA[1]       ; mainClk                                           ; 7.933  ; 7.933  ; Fall       ; mainClk                                           ;
+;  cdcA[2]       ; mainClk                                           ; 8.547  ; 8.547  ; Fall       ; mainClk                                           ;
+;  cdcA[3]       ; mainClk                                           ; 7.291  ; 7.291  ; Fall       ; mainClk                                           ;
+;  cdcA[4]       ; mainClk                                           ; 7.284  ; 7.284  ; Fall       ; mainClk                                           ;
+;  cdcA[5]       ; mainClk                                           ; 8.610  ; 8.610  ; Fall       ; mainClk                                           ;
+;  cdcA[6]       ; mainClk                                           ; 8.480  ; 8.480  ; Fall       ; mainClk                                           ;
+;  cdcA[7]       ; mainClk                                           ; 8.721  ; 8.721  ; Fall       ; mainClk                                           ;
+; cdcB[*]        ; mainClk                                           ; 10.391 ; 10.391 ; Fall       ; mainClk                                           ;
+;  cdcB[0]       ; mainClk                                           ; 10.310 ; 10.310 ; Fall       ; mainClk                                           ;
+;  cdcB[1]       ; mainClk                                           ; 10.121 ; 10.121 ; Fall       ; mainClk                                           ;
+;  cdcB[2]       ; mainClk                                           ; 9.943  ; 9.943  ; Fall       ; mainClk                                           ;
+;  cdcB[3]       ; mainClk                                           ; 10.019 ; 10.019 ; Fall       ; mainClk                                           ;
+;  cdcB[4]       ; mainClk                                           ; 10.243 ; 10.243 ; Fall       ; mainClk                                           ;
+;  cdcB[5]       ; mainClk                                           ; 10.343 ; 10.343 ; Fall       ; mainClk                                           ;
+;  cdcB[6]       ; mainClk                                           ; 10.391 ; 10.391 ; Fall       ; mainClk                                           ;
+;  cdcB[7]       ; mainClk                                           ; 10.054 ; 10.054 ; Fall       ; mainClk                                           ;
+; cdcC[*]        ; mainClk                                           ; 9.784  ; 9.784  ; Fall       ; mainClk                                           ;
+;  cdcC[0]       ; mainClk                                           ; 8.666  ; 8.666  ; Fall       ; mainClk                                           ;
+;  cdcC[1]       ; mainClk                                           ; 9.407  ; 9.407  ; Fall       ; mainClk                                           ;
+;  cdcC[2]       ; mainClk                                           ; 8.571  ; 8.571  ; Fall       ; mainClk                                           ;
+;  cdcC[3]       ; mainClk                                           ; 9.379  ; 9.379  ; Fall       ; mainClk                                           ;
+;  cdcC[4]       ; mainClk                                           ; 9.710  ; 9.710  ; Fall       ; mainClk                                           ;
+;  cdcC[5]       ; mainClk                                           ; 9.784  ; 9.784  ; Fall       ; mainClk                                           ;
+;  cdcC[6]       ; mainClk                                           ; 8.919  ; 8.919  ; Fall       ; mainClk                                           ;
+;  cdcC[7]       ; mainClk                                           ; 8.372  ; 8.372  ; Fall       ; mainClk                                           ;
+; cdcD[*]        ; mainClk                                           ; 8.931  ; 8.931  ; Fall       ; mainClk                                           ;
+;  cdcD[0]       ; mainClk                                           ; 8.880  ; 8.880  ; Fall       ; mainClk                                           ;
+;  cdcD[1]       ; mainClk                                           ; 8.931  ; 8.931  ; Fall       ; mainClk                                           ;
+;  cdcD[2]       ; mainClk                                           ; 8.930  ; 8.930  ; Fall       ; mainClk                                           ;
+;  cdcD[3]       ; mainClk                                           ; 8.922  ; 8.922  ; Fall       ; mainClk                                           ;
+;  cdcD[4]       ; mainClk                                           ; 8.501  ; 8.501  ; Fall       ; mainClk                                           ;
+;  cdcD[5]       ; mainClk                                           ; 8.388  ; 8.388  ; Fall       ; mainClk                                           ;
+;  cdcD[6]       ; mainClk                                           ; 7.291  ; 7.291  ; Fall       ; mainClk                                           ;
+;  cdcD[7]       ; mainClk                                           ; 7.291  ; 7.291  ; Fall       ; mainClk                                           ;
+; cdcE[*]        ; mainClk                                           ; 9.018  ; 9.018  ; Fall       ; mainClk                                           ;
+;  cdcE[0]       ; mainClk                                           ; 7.305  ; 7.305  ; Fall       ; mainClk                                           ;
+;  cdcE[1]       ; mainClk                                           ; 8.370  ; 8.370  ; Fall       ; mainClk                                           ;
+;  cdcE[2]       ; mainClk                                           ; 8.384  ; 8.384  ; Fall       ; mainClk                                           ;
+;  cdcE[3]       ; mainClk                                           ; 9.018  ; 9.018  ; Fall       ; mainClk                                           ;
++----------------+---------------------------------------------------+--------+--------+------------+---------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                                         ;
++----------------+---------------------------------------------------+--------+--------+------------+---------------------------------------------------+
+; Data Port      ; Clock Port                                        ; Rise   ; Fall   ; Clock Edge ; Clock Reference                                   ;
++----------------+---------------------------------------------------+--------+--------+------------+---------------------------------------------------+
+; data[*]        ; StepMotorWithDAcc:stepMotor10|register_need_write ; 13.127 ; 13.127 ; Rise       ; StepMotorWithDAcc:stepMotor10|register_need_write ;
+;  data[1]       ; StepMotorWithDAcc:stepMotor10|register_need_write ; 13.127 ; 13.127 ; Rise       ; StepMotorWithDAcc:stepMotor10|register_need_write ;
+; int1           ; StepMotorWithDAcc:stepMotor10|register_need_write ; 11.095 ; 11.095 ; Rise       ; StepMotorWithDAcc:stepMotor10|register_need_write ;
+; data[*]        ; StepMotorWithDAcc:stepMotor11|register_need_write ; 12.902 ; 12.902 ; Rise       ; StepMotorWithDAcc:stepMotor11|register_need_write ;
+;  data[2]       ; StepMotorWithDAcc:stepMotor11|register_need_write ; 12.902 ; 12.902 ; Rise       ; StepMotorWithDAcc:stepMotor11|register_need_write ;
+; int1           ; StepMotorWithDAcc:stepMotor11|register_need_write ; 12.560 ; 12.560 ; Rise       ; StepMotorWithDAcc:stepMotor11|register_need_write ;
+; data[*]        ; StepMotorWithDAcc:stepMotor12|register_need_write ; 12.286 ; 12.286 ; Rise       ; StepMotorWithDAcc:stepMotor12|register_need_write ;
+;  data[3]       ; StepMotorWithDAcc:stepMotor12|register_need_write ; 12.286 ; 12.286 ; Rise       ; StepMotorWithDAcc:stepMotor12|register_need_write ;
+; int1           ; StepMotorWithDAcc:stepMotor12|register_need_write ; 11.569 ; 11.569 ; Rise       ; StepMotorWithDAcc:stepMotor12|register_need_write ;
+; data[*]        ; StepMotorWithDAcc:stepMotor1|register_need_write  ; 13.391 ; 13.391 ; Rise       ; StepMotorWithDAcc:stepMotor1|register_need_write  ;
+;  data[0]       ; StepMotorWithDAcc:stepMotor1|register_need_write  ; 13.391 ; 13.391 ; Rise       ; StepMotorWithDAcc:stepMotor1|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor1|register_need_write  ; 12.243 ; 12.243 ; Rise       ; StepMotorWithDAcc:stepMotor1|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor2|register_need_write  ; 12.447 ; 12.447 ; Rise       ; StepMotorWithDAcc:stepMotor2|register_need_write  ;
+;  data[1]       ; StepMotorWithDAcc:stepMotor2|register_need_write  ; 12.447 ; 12.447 ; Rise       ; StepMotorWithDAcc:stepMotor2|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor2|register_need_write  ; 9.697  ; 9.697  ; Rise       ; StepMotorWithDAcc:stepMotor2|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor3|register_need_write  ; 12.865 ; 12.865 ; Rise       ; StepMotorWithDAcc:stepMotor3|register_need_write  ;
+;  data[2]       ; StepMotorWithDAcc:stepMotor3|register_need_write  ; 12.865 ; 12.865 ; Rise       ; StepMotorWithDAcc:stepMotor3|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor3|register_need_write  ; 11.044 ; 11.044 ; Rise       ; StepMotorWithDAcc:stepMotor3|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor4|register_need_write  ; 11.688 ; 11.688 ; Rise       ; StepMotorWithDAcc:stepMotor4|register_need_write  ;
+;  data[3]       ; StepMotorWithDAcc:stepMotor4|register_need_write  ; 11.688 ; 11.688 ; Rise       ; StepMotorWithDAcc:stepMotor4|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor4|register_need_write  ; 9.344  ; 9.344  ; Rise       ; StepMotorWithDAcc:stepMotor4|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor5|register_need_write  ; 10.590 ; 10.590 ; Rise       ; StepMotorWithDAcc:stepMotor5|register_need_write  ;
+;  data[4]       ; StepMotorWithDAcc:stepMotor5|register_need_write  ; 10.590 ; 10.590 ; Rise       ; StepMotorWithDAcc:stepMotor5|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor5|register_need_write  ; 11.363 ; 11.363 ; Rise       ; StepMotorWithDAcc:stepMotor5|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor6|register_need_write  ; 8.780  ; 8.780  ; Rise       ; StepMotorWithDAcc:stepMotor6|register_need_write  ;
+;  data[5]       ; StepMotorWithDAcc:stepMotor6|register_need_write  ; 8.780  ; 8.780  ; Rise       ; StepMotorWithDAcc:stepMotor6|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor6|register_need_write  ; 11.530 ; 11.530 ; Rise       ; StepMotorWithDAcc:stepMotor6|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor7|register_need_write  ; 10.265 ; 10.265 ; Rise       ; StepMotorWithDAcc:stepMotor7|register_need_write  ;
+;  data[6]       ; StepMotorWithDAcc:stepMotor7|register_need_write  ; 10.265 ; 10.265 ; Rise       ; StepMotorWithDAcc:stepMotor7|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor7|register_need_write  ; 10.661 ; 10.661 ; Rise       ; StepMotorWithDAcc:stepMotor7|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor8|register_need_write  ; 10.274 ; 10.274 ; Rise       ; StepMotorWithDAcc:stepMotor8|register_need_write  ;
+;  data[7]       ; StepMotorWithDAcc:stepMotor8|register_need_write  ; 10.274 ; 10.274 ; Rise       ; StepMotorWithDAcc:stepMotor8|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor8|register_need_write  ; 11.200 ; 11.200 ; Rise       ; StepMotorWithDAcc:stepMotor8|register_need_write  ;
+; data[*]        ; StepMotorWithDAcc:stepMotor9|register_need_write  ; 12.410 ; 12.410 ; Rise       ; StepMotorWithDAcc:stepMotor9|register_need_write  ;
+;  data[0]       ; StepMotorWithDAcc:stepMotor9|register_need_write  ; 12.410 ; 12.410 ; Rise       ; StepMotorWithDAcc:stepMotor9|register_need_write  ;
+; int1           ; StepMotorWithDAcc:stepMotor9|register_need_write  ; 10.237 ; 10.237 ; Rise       ; StepMotorWithDAcc:stepMotor9|register_need_write  ;
+; stemMotor1PWM  ; mainClk                                           ; 10.247 ; 10.247 ; Rise       ; mainClk                                           ;
+; stemMotor2PWM  ; mainClk                                           ; 9.021  ; 9.021  ; Rise       ; mainClk                                           ;
+; stemMotor3PWM  ; mainClk                                           ; 10.257 ; 10.257 ; Rise       ; mainClk                                           ;
+; stemMotor4PWM  ; mainClk                                           ; 9.169  ; 9.169  ; Rise       ; mainClk                                           ;
+; stemMotor5PWM  ; mainClk                                           ; 10.865 ; 10.865 ; Rise       ; mainClk                                           ;
+; stemMotor6PWM  ; mainClk                                           ; 8.380  ; 8.380  ; Rise       ; mainClk                                           ;
+; stemMotor7PWM  ; mainClk                                           ; 9.755  ; 9.755  ; Rise       ; mainClk                                           ;
+; stemMotor8PWM  ; mainClk                                           ; 10.969 ; 10.969 ; Rise       ; mainClk                                           ;
+; stemMotor9PWM  ; mainClk                                           ; 9.436  ; 9.436  ; Rise       ; mainClk                                           ;
+; stemMotor10PWM ; mainClk                                           ; 8.525  ; 8.525  ; Rise       ; mainClk                                           ;
+; stemMotor11PWM ; mainClk                                           ; 9.706  ; 9.706  ; Rise       ; mainClk                                           ;
+; stemMotor12PWM ; mainClk                                           ; 10.427 ; 10.427 ; Rise       ; mainClk                                           ;
+; stepMotor1Dir  ; mainClk                                           ; 7.291  ; 7.291  ; Rise       ; mainClk                                           ;
+; stepMotor1En   ; mainClk                                           ; 7.291  ; 7.291  ; Rise       ; mainClk                                           ;
+; stepMotor2Dir  ; mainClk                                           ; 8.990  ; 8.990  ; Rise       ; mainClk                                           ;
+; stepMotor2En   ; mainClk                                           ; 9.073  ; 9.073  ; Rise       ; mainClk                                           ;
+; stepMotor3Dir  ; mainClk                                           ; 10.575 ; 10.575 ; Rise       ; mainClk                                           ;
+; stepMotor3En   ; mainClk                                           ; 9.987  ; 9.987  ; Rise       ; mainClk                                           ;
+; stepMotor4Dir  ; mainClk                                           ; 9.240  ; 9.240  ; Rise       ; mainClk                                           ;
+; stepMotor4En   ; mainClk                                           ; 9.350  ; 9.350  ; Rise       ; mainClk                                           ;
+; stepMotor5Dir  ; mainClk                                           ; 9.746  ; 9.746  ; Rise       ; mainClk                                           ;
+; stepMotor5En   ; mainClk                                           ; 9.831  ; 9.831  ; Rise       ; mainClk                                           ;
+; stepMotor6Dir  ; mainClk                                           ; 9.358  ; 9.358  ; Rise       ; mainClk                                           ;
+; stepMotor6En   ; mainClk                                           ; 8.685  ; 8.685  ; Rise       ; mainClk                                           ;
+; stepMotor7Dir  ; mainClk                                           ; 9.483  ; 9.483  ; Rise       ; mainClk                                           ;
+; stepMotor7En   ; mainClk                                           ; 10.117 ; 10.117 ; Rise       ; mainClk                                           ;
+; stepMotor8Dir  ; mainClk                                           ; 10.406 ; 10.406 ; Rise       ; mainClk                                           ;
+; stepMotor8En   ; mainClk                                           ; 10.115 ; 10.115 ; Rise       ; mainClk                                           ;
+; stepMotor9Dir  ; mainClk                                           ; 10.313 ; 10.313 ; Rise       ; mainClk                                           ;
+; stepMotor9En   ; mainClk                                           ; 9.308  ; 9.308  ; Rise       ; mainClk                                           ;
+; stepMotor10Dir ; mainClk                                           ; 9.139  ; 9.139  ; Rise       ; mainClk                                           ;
+; stepMotor10En  ; mainClk                                           ; 9.143  ; 9.143  ; Rise       ; mainClk                                           ;
+; stepMotor11Dir ; mainClk                                           ; 9.054  ; 9.054  ; Rise       ; mainClk                                           ;
+; stepMotor11En  ; mainClk                                           ; 9.707  ; 9.707  ; Rise       ; mainClk                                           ;
+; stepMotor12Dir ; mainClk                                           ; 10.795 ; 10.795 ; Rise       ; mainClk                                           ;
+; stepMotor12En  ; mainClk                                           ; 11.085 ; 11.085 ; Rise       ; mainClk                                           ;
+; cdcA[*]        ; mainClk                                           ; 7.284  ; 7.284  ; Fall       ; mainClk                                           ;
+;  cdcA[0]       ; mainClk                                           ; 8.790  ; 8.790  ; Fall       ; mainClk                                           ;
+;  cdcA[1]       ; mainClk                                           ; 7.933  ; 7.933  ; Fall       ; mainClk                                           ;
+;  cdcA[2]       ; mainClk                                           ; 8.547  ; 8.547  ; Fall       ; mainClk                                           ;
+;  cdcA[3]       ; mainClk                                           ; 7.291  ; 7.291  ; Fall       ; mainClk                                           ;
+;  cdcA[4]       ; mainClk                                           ; 7.284  ; 7.284  ; Fall       ; mainClk                                           ;
+;  cdcA[5]       ; mainClk                                           ; 8.610  ; 8.610  ; Fall       ; mainClk                                           ;
+;  cdcA[6]       ; mainClk                                           ; 8.480  ; 8.480  ; Fall       ; mainClk                                           ;
+;  cdcA[7]       ; mainClk                                           ; 8.721  ; 8.721  ; Fall       ; mainClk                                           ;
+; cdcB[*]        ; mainClk                                           ; 9.943  ; 9.943  ; Fall       ; mainClk                                           ;
+;  cdcB[0]       ; mainClk                                           ; 10.310 ; 10.310 ; Fall       ; mainClk                                           ;
+;  cdcB[1]       ; mainClk                                           ; 10.121 ; 10.121 ; Fall       ; mainClk                                           ;
+;  cdcB[2]       ; mainClk                                           ; 9.943  ; 9.943  ; Fall       ; mainClk                                           ;
+;  cdcB[3]       ; mainClk                                           ; 10.019 ; 10.019 ; Fall       ; mainClk                                           ;
+;  cdcB[4]       ; mainClk                                           ; 10.243 ; 10.243 ; Fall       ; mainClk                                           ;
+;  cdcB[5]       ; mainClk                                           ; 10.343 ; 10.343 ; Fall       ; mainClk                                           ;
+;  cdcB[6]       ; mainClk                                           ; 10.391 ; 10.391 ; Fall       ; mainClk                                           ;
+;  cdcB[7]       ; mainClk                                           ; 10.054 ; 10.054 ; Fall       ; mainClk                                           ;
+; cdcC[*]        ; mainClk                                           ; 8.372  ; 8.372  ; Fall       ; mainClk                                           ;
+;  cdcC[0]       ; mainClk                                           ; 8.666  ; 8.666  ; Fall       ; mainClk                                           ;
+;  cdcC[1]       ; mainClk                                           ; 9.407  ; 9.407  ; Fall       ; mainClk                                           ;
+;  cdcC[2]       ; mainClk                                           ; 8.571  ; 8.571  ; Fall       ; mainClk                                           ;
+;  cdcC[3]       ; mainClk                                           ; 9.379  ; 9.379  ; Fall       ; mainClk                                           ;
+;  cdcC[4]       ; mainClk                                           ; 9.710  ; 9.710  ; Fall       ; mainClk                                           ;
+;  cdcC[5]       ; mainClk                                           ; 9.784  ; 9.784  ; Fall       ; mainClk                                           ;
+;  cdcC[6]       ; mainClk                                           ; 8.919  ; 8.919  ; Fall       ; mainClk                                           ;
+;  cdcC[7]       ; mainClk                                           ; 8.372  ; 8.372  ; Fall       ; mainClk                                           ;
+; cdcD[*]        ; mainClk                                           ; 7.291  ; 7.291  ; Fall       ; mainClk                                           ;
+;  cdcD[0]       ; mainClk                                           ; 8.880  ; 8.880  ; Fall       ; mainClk                                           ;
+;  cdcD[1]       ; mainClk                                           ; 8.931  ; 8.931  ; Fall       ; mainClk                                           ;
+;  cdcD[2]       ; mainClk                                           ; 8.930  ; 8.930  ; Fall       ; mainClk                                           ;
+;  cdcD[3]       ; mainClk                                           ; 8.922  ; 8.922  ; Fall       ; mainClk                                           ;
+;  cdcD[4]       ; mainClk                                           ; 8.501  ; 8.501  ; Fall       ; mainClk                                           ;
+;  cdcD[5]       ; mainClk                                           ; 8.388  ; 8.388  ; Fall       ; mainClk                                           ;
+;  cdcD[6]       ; mainClk                                           ; 7.291  ; 7.291  ; Fall       ; mainClk                                           ;
+;  cdcD[7]       ; mainClk                                           ; 7.291  ; 7.291  ; Fall       ; mainClk                                           ;
+; cdcE[*]        ; mainClk                                           ; 7.305  ; 7.305  ; Fall       ; mainClk                                           ;
+;  cdcE[0]       ; mainClk                                           ; 7.305  ; 7.305  ; Fall       ; mainClk                                           ;
+;  cdcE[1]       ; mainClk                                           ; 8.370  ; 8.370  ; Fall       ; mainClk                                           ;
+;  cdcE[2]       ; mainClk                                           ; 8.384  ; 8.384  ; Fall       ; mainClk                                           ;
+;  cdcE[3]       ; mainClk                                           ; 9.018  ; 9.018  ; Fall       ; mainClk                                           ;
++----------------+---------------------------------------------------+--------+--------+------------+---------------------------------------------------+
+
+
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; addr[0]    ; data[0]     ; 13.038 ;    ;    ; 13.038 ;
+; addr[0]    ; data[1]     ; 13.310 ;    ;    ; 13.310 ;
+; addr[0]    ; data[2]     ; 13.418 ;    ;    ; 13.418 ;
+; addr[0]    ; data[3]     ; 12.543 ;    ;    ; 12.543 ;
+; addr[0]    ; data[4]     ; 10.633 ;    ;    ; 10.633 ;
+; addr[0]    ; data[5]     ; 10.513 ;    ;    ; 10.513 ;
+; addr[0]    ; data[6]     ; 8.976  ;    ;    ; 8.976  ;
+; addr[0]    ; data[7]     ; 11.530 ;    ;    ; 11.530 ;
+; addr[1]    ; data[0]     ; 12.589 ;    ;    ; 12.589 ;
+; addr[1]    ; data[1]     ; 13.609 ;    ;    ; 13.609 ;
+; addr[1]    ; data[2]     ; 13.037 ;    ;    ; 13.037 ;
+; addr[1]    ; data[3]     ; 12.842 ;    ;    ; 12.842 ;
+; addr[1]    ; data[4]     ; 10.327 ;    ;    ; 10.327 ;
+; addr[1]    ; data[5]     ; 9.902  ;    ;    ; 9.902  ;
+; addr[1]    ; data[6]     ; 10.111 ;    ;    ; 10.111 ;
+; addr[1]    ; data[7]     ; 11.223 ;    ;    ; 11.223 ;
+; addr[2]    ; data[0]     ; 12.079 ;    ;    ; 12.079 ;
+; addr[2]    ; data[1]     ; 11.393 ;    ;    ; 11.393 ;
+; addr[2]    ; data[2]     ; 10.945 ;    ;    ; 10.945 ;
+; addr[2]    ; data[3]     ; 11.126 ;    ;    ; 11.126 ;
+; addr[2]    ; data[4]     ; 11.150 ;    ;    ; 11.150 ;
+; addr[2]    ; data[5]     ; 10.978 ;    ;    ; 10.978 ;
+; addr[2]    ; data[6]     ; 10.896 ;    ;    ; 10.896 ;
+; addr[2]    ; data[7]     ; 11.429 ;    ;    ; 11.429 ;
+; addr[3]    ; data[0]     ; 12.112 ;    ;    ; 12.112 ;
+; addr[3]    ; data[1]     ; 11.967 ;    ;    ; 11.967 ;
+; addr[3]    ; data[2]     ; 10.856 ;    ;    ; 10.856 ;
+; addr[3]    ; data[3]     ; 11.037 ;    ;    ; 11.037 ;
+; addr[3]    ; data[4]     ; 9.895  ;    ;    ; 9.895  ;
+; addr[3]    ; data[5]     ; 9.995  ;    ;    ; 9.995  ;
+; addr[3]    ; data[6]     ; 10.807 ;    ;    ; 10.807 ;
+; addr[3]    ; data[7]     ; 11.627 ;    ;    ; 11.627 ;
+; addr[4]    ; data[0]     ; 12.779 ;    ;    ; 12.779 ;
+; addr[4]    ; data[1]     ; 12.634 ;    ;    ; 12.634 ;
+; addr[4]    ; data[2]     ; 11.181 ;    ;    ; 11.181 ;
+; addr[4]    ; data[3]     ; 11.534 ;    ;    ; 11.534 ;
+; addr[4]    ; data[4]     ; 9.670  ;    ;    ; 9.670  ;
+; addr[4]    ; data[5]     ; 9.770  ;    ;    ; 9.770  ;
+; addr[4]    ; data[6]     ; 11.132 ;    ;    ; 11.132 ;
+; addr[4]    ; data[7]     ; 11.665 ;    ;    ; 11.665 ;
+; addr[5]    ; data[0]     ; 14.101 ;    ;    ; 14.101 ;
+; addr[5]    ; data[1]     ; 13.892 ;    ;    ; 13.892 ;
+; addr[5]    ; data[2]     ; 12.967 ;    ;    ; 12.967 ;
+; addr[5]    ; data[3]     ; 13.148 ;    ;    ; 13.148 ;
+; addr[5]    ; data[4]     ; 11.165 ;    ;    ; 11.165 ;
+; addr[5]    ; data[5]     ; 11.265 ;    ;    ; 11.265 ;
+; addr[5]    ; data[6]     ; 12.918 ;    ;    ; 12.918 ;
+; addr[5]    ; data[7]     ; 13.451 ;    ;    ; 13.451 ;
+; addr[6]    ; data[0]     ; 13.782 ;    ;    ; 13.782 ;
+; addr[6]    ; data[1]     ; 13.573 ;    ;    ; 13.573 ;
+; addr[6]    ; data[2]     ; 12.648 ;    ;    ; 12.648 ;
+; addr[6]    ; data[3]     ; 12.829 ;    ;    ; 12.829 ;
+; addr[6]    ; data[4]     ; 10.846 ;    ;    ; 10.846 ;
+; addr[6]    ; data[5]     ; 10.946 ;    ;    ; 10.946 ;
+; addr[6]    ; data[6]     ; 12.599 ;    ;    ; 12.599 ;
+; addr[6]    ; data[7]     ; 13.132 ;    ;    ; 13.132 ;
+; addr[7]    ; data[0]     ; 14.492 ;    ;    ; 14.492 ;
+; addr[7]    ; data[1]     ; 14.283 ;    ;    ; 14.283 ;
+; addr[7]    ; data[2]     ; 13.358 ;    ;    ; 13.358 ;
+; addr[7]    ; data[3]     ; 13.539 ;    ;    ; 13.539 ;
+; addr[7]    ; data[4]     ; 11.556 ;    ;    ; 11.556 ;
+; addr[7]    ; data[5]     ; 11.656 ;    ;    ; 11.656 ;
+; addr[7]    ; data[6]     ; 13.309 ;    ;    ; 13.309 ;
+; addr[7]    ; data[7]     ; 13.842 ;    ;    ; 13.842 ;
+; nopA[0]    ; data[0]     ; 11.443 ;    ;    ; 11.443 ;
+; nopA[1]    ; data[1]     ; 10.391 ;    ;    ; 10.391 ;
+; nopA[2]    ; data[2]     ; 12.014 ;    ;    ; 12.014 ;
+; nopA[3]    ; data[3]     ; 9.726  ;    ;    ; 9.726  ;
+; nopA[4]    ; data[4]     ; 11.256 ;    ;    ; 11.256 ;
+; nopA[5]    ; data[5]     ; 11.051 ;    ;    ; 11.051 ;
+; nopA[6]    ; data[6]     ; 9.900  ;    ;    ; 9.900  ;
+; nopA[7]    ; data[7]     ; 10.453 ;    ;    ; 10.453 ;
+; nopB[0]    ; data[0]     ; 10.804 ;    ;    ; 10.804 ;
+; nopB[1]    ; data[1]     ; 10.636 ;    ;    ; 10.636 ;
+; nopB[2]    ; data[2]     ; 10.759 ;    ;    ; 10.759 ;
+; nopB[3]    ; data[3]     ; 9.766  ;    ;    ; 9.766  ;
+; nopB[4]    ; data[4]     ; 10.516 ;    ;    ; 10.516 ;
+; nopB[5]    ; data[5]     ; 11.399 ;    ;    ; 11.399 ;
+; read_n     ; data[0]     ; 6.935  ;    ;    ; 6.935  ;
+; read_n     ; data[1]     ; 6.935  ;    ;    ; 6.935  ;
+; read_n     ; data[2]     ; 6.935  ;    ;    ; 6.935  ;
+; read_n     ; data[3]     ; 6.935  ;    ;    ; 6.935  ;
+; read_n     ; data[4]     ; 6.935  ;    ;    ; 6.935  ;
+; read_n     ; data[5]     ; 6.253  ;    ;    ; 6.253  ;
+; read_n     ; data[6]     ; 6.253  ;    ;    ; 6.253  ;
+; read_n     ; data[7]     ; 6.253  ;    ;    ; 6.253  ;
+; select_n   ; data[0]     ; 7.086  ;    ;    ; 7.086  ;
+; select_n   ; data[1]     ; 7.086  ;    ;    ; 7.086  ;
+; select_n   ; data[2]     ; 7.086  ;    ;    ; 7.086  ;
+; select_n   ; data[3]     ; 7.086  ;    ;    ; 7.086  ;
+; select_n   ; data[4]     ; 7.086  ;    ;    ; 7.086  ;
+; select_n   ; data[5]     ; 6.404  ;    ;    ; 6.404  ;
+; select_n   ; data[6]     ; 6.404  ;    ;    ; 6.404  ;
+; select_n   ; data[7]     ; 6.404  ;    ;    ; 6.404  ;
++------------+-------------+--------+----+----+--------+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; addr[0]    ; data[0]     ; 9.826  ;    ;    ; 9.826  ;
+; addr[0]    ; data[1]     ; 13.310 ;    ;    ; 13.310 ;
+; addr[0]    ; data[2]     ; 12.133 ;    ;    ; 12.133 ;
+; addr[0]    ; data[3]     ; 9.850  ;    ;    ; 9.850  ;
+; addr[0]    ; data[4]     ; 9.010  ;    ;    ; 9.010  ;
+; addr[0]    ; data[5]     ; 10.212 ;    ;    ; 10.212 ;
+; addr[0]    ; data[6]     ; 8.976  ;    ;    ; 8.976  ;
+; addr[0]    ; data[7]     ; 8.599  ;    ;    ; 8.599  ;
+; addr[1]    ; data[0]     ; 11.308 ;    ;    ; 11.308 ;
+; addr[1]    ; data[1]     ; 11.659 ;    ;    ; 11.659 ;
+; addr[1]    ; data[2]     ; 13.037 ;    ;    ; 13.037 ;
+; addr[1]    ; data[3]     ; 10.321 ;    ;    ; 10.321 ;
+; addr[1]    ; data[4]     ; 10.204 ;    ;    ; 10.204 ;
+; addr[1]    ; data[5]     ; 8.632  ;    ;    ; 8.632  ;
+; addr[1]    ; data[6]     ; 10.111 ;    ;    ; 10.111 ;
+; addr[1]    ; data[7]     ; 9.737  ;    ;    ; 9.737  ;
+; addr[2]    ; data[0]     ; 12.079 ;    ;    ; 12.079 ;
+; addr[2]    ; data[1]     ; 11.393 ;    ;    ; 11.393 ;
+; addr[2]    ; data[2]     ; 10.945 ;    ;    ; 10.945 ;
+; addr[2]    ; data[3]     ; 11.126 ;    ;    ; 11.126 ;
+; addr[2]    ; data[4]     ; 10.351 ;    ;    ; 10.351 ;
+; addr[2]    ; data[5]     ; 9.930  ;    ;    ; 9.930  ;
+; addr[2]    ; data[6]     ; 10.896 ;    ;    ; 10.896 ;
+; addr[2]    ; data[7]     ; 11.249 ;    ;    ; 11.249 ;
+; addr[3]    ; data[0]     ; 11.990 ;    ;    ; 11.990 ;
+; addr[3]    ; data[1]     ; 11.304 ;    ;    ; 11.304 ;
+; addr[3]    ; data[2]     ; 10.856 ;    ;    ; 10.856 ;
+; addr[3]    ; data[3]     ; 10.867 ;    ;    ; 10.867 ;
+; addr[3]    ; data[4]     ; 9.895  ;    ;    ; 9.895  ;
+; addr[3]    ; data[5]     ; 9.995  ;    ;    ; 9.995  ;
+; addr[3]    ; data[6]     ; 10.807 ;    ;    ; 10.807 ;
+; addr[3]    ; data[7]     ; 11.340 ;    ;    ; 11.340 ;
+; addr[4]    ; data[0]     ; 12.315 ;    ;    ; 12.315 ;
+; addr[4]    ; data[1]     ; 11.629 ;    ;    ; 11.629 ;
+; addr[4]    ; data[2]     ; 11.181 ;    ;    ; 11.181 ;
+; addr[4]    ; data[3]     ; 11.362 ;    ;    ; 11.362 ;
+; addr[4]    ; data[4]     ; 9.670  ;    ;    ; 9.670  ;
+; addr[4]    ; data[5]     ; 9.770  ;    ;    ; 9.770  ;
+; addr[4]    ; data[6]     ; 11.132 ;    ;    ; 11.132 ;
+; addr[4]    ; data[7]     ; 11.402 ;    ;    ; 11.402 ;
+; addr[5]    ; data[0]     ; 14.037 ;    ;    ; 14.037 ;
+; addr[5]    ; data[1]     ; 13.415 ;    ;    ; 13.415 ;
+; addr[5]    ; data[2]     ; 12.967 ;    ;    ; 12.967 ;
+; addr[5]    ; data[3]     ; 12.792 ;    ;    ; 12.792 ;
+; addr[5]    ; data[4]     ; 11.165 ;    ;    ; 11.165 ;
+; addr[5]    ; data[5]     ; 11.265 ;    ;    ; 11.265 ;
+; addr[5]    ; data[6]     ; 12.918 ;    ;    ; 12.918 ;
+; addr[5]    ; data[7]     ; 12.897 ;    ;    ; 12.897 ;
+; addr[6]    ; data[0]     ; 13.718 ;    ;    ; 13.718 ;
+; addr[6]    ; data[1]     ; 13.096 ;    ;    ; 13.096 ;
+; addr[6]    ; data[2]     ; 12.648 ;    ;    ; 12.648 ;
+; addr[6]    ; data[3]     ; 12.473 ;    ;    ; 12.473 ;
+; addr[6]    ; data[4]     ; 10.846 ;    ;    ; 10.846 ;
+; addr[6]    ; data[5]     ; 10.946 ;    ;    ; 10.946 ;
+; addr[6]    ; data[6]     ; 12.599 ;    ;    ; 12.599 ;
+; addr[6]    ; data[7]     ; 12.578 ;    ;    ; 12.578 ;
+; addr[7]    ; data[0]     ; 14.428 ;    ;    ; 14.428 ;
+; addr[7]    ; data[1]     ; 13.806 ;    ;    ; 13.806 ;
+; addr[7]    ; data[2]     ; 13.358 ;    ;    ; 13.358 ;
+; addr[7]    ; data[3]     ; 13.183 ;    ;    ; 13.183 ;
+; addr[7]    ; data[4]     ; 11.556 ;    ;    ; 11.556 ;
+; addr[7]    ; data[5]     ; 11.656 ;    ;    ; 11.656 ;
+; addr[7]    ; data[6]     ; 13.309 ;    ;    ; 13.309 ;
+; addr[7]    ; data[7]     ; 13.288 ;    ;    ; 13.288 ;
+; nopA[0]    ; data[0]     ; 11.443 ;    ;    ; 11.443 ;
+; nopA[1]    ; data[1]     ; 10.391 ;    ;    ; 10.391 ;
+; nopA[2]    ; data[2]     ; 12.014 ;    ;    ; 12.014 ;
+; nopA[3]    ; data[3]     ; 9.726  ;    ;    ; 9.726  ;
+; nopA[4]    ; data[4]     ; 11.256 ;    ;    ; 11.256 ;
+; nopA[5]    ; data[5]     ; 11.051 ;    ;    ; 11.051 ;
+; nopA[6]    ; data[6]     ; 9.900  ;    ;    ; 9.900  ;
+; nopA[7]    ; data[7]     ; 10.453 ;    ;    ; 10.453 ;
+; nopB[0]    ; data[0]     ; 10.804 ;    ;    ; 10.804 ;
+; nopB[1]    ; data[1]     ; 10.636 ;    ;    ; 10.636 ;
+; nopB[2]    ; data[2]     ; 10.759 ;    ;    ; 10.759 ;
+; nopB[3]    ; data[3]     ; 9.766  ;    ;    ; 9.766  ;
+; nopB[4]    ; data[4]     ; 10.516 ;    ;    ; 10.516 ;
+; nopB[5]    ; data[5]     ; 11.399 ;    ;    ; 11.399 ;
+; read_n     ; data[0]     ; 6.935  ;    ;    ; 6.935  ;
+; read_n     ; data[1]     ; 6.935  ;    ;    ; 6.935  ;
+; read_n     ; data[2]     ; 6.935  ;    ;    ; 6.935  ;
+; read_n     ; data[3]     ; 6.935  ;    ;    ; 6.935  ;
+; read_n     ; data[4]     ; 6.935  ;    ;    ; 6.935  ;
+; read_n     ; data[5]     ; 6.253  ;    ;    ; 6.253  ;
+; read_n     ; data[6]     ; 6.253  ;    ;    ; 6.253  ;
+; read_n     ; data[7]     ; 6.253  ;    ;    ; 6.253  ;
+; select_n   ; data[0]     ; 7.086  ;    ;    ; 7.086  ;
+; select_n   ; data[1]     ; 7.086  ;    ;    ; 7.086  ;
+; select_n   ; data[2]     ; 7.086  ;    ;    ; 7.086  ;
+; select_n   ; data[3]     ; 7.086  ;    ;    ; 7.086  ;
+; select_n   ; data[4]     ; 7.086  ;    ;    ; 7.086  ;
+; select_n   ; data[5]     ; 6.404  ;    ;    ; 6.404  ;
+; select_n   ; data[6]     ; 6.404  ;    ;    ; 6.404  ;
+; select_n   ; data[7]     ; 6.404  ;    ;    ; 6.404  ;
++------------+-------------+--------+----+----+--------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; mainClk    ; mainClk  ; 14520    ; 360      ; 0        ; 96       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; mainClk    ; mainClk  ; 14520    ; 360      ; 0        ; 96       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 34    ; 34   ;
+; Unconstrained Input Port Paths  ; 4630  ; 4630 ;
+; Unconstrained Output Ports      ; 81    ; 81   ;
+; Unconstrained Output Port Paths ; 190   ; 190  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+    Info: Processing started: Tue Jun 25 09:16:38 2019
+Info: Command: quartus_sta H200_CPLD_Motor12 -c H200_CPLD_Motor12
+Info: qsta_default_script.tcl version: #11
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (306004): Started post-fitting delay annotation
+Info (306005): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'H200_CPLD_Motor12.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name mainClk mainClk
+    Info (332105): create_clock -period 1.000 -name StepMotorWithDAcc:stepMotor1|register_need_write StepMotorWithDAcc:stepMotor1|register_need_write
+    Info (332105): create_clock -period 1.000 -name StepMotorWithDAcc:stepMotor2|register_need_write StepMotorWithDAcc:stepMotor2|register_need_write
+    Info (332105): create_clock -period 1.000 -name StepMotorWithDAcc:stepMotor3|register_need_write StepMotorWithDAcc:stepMotor3|register_need_write
+    Info (332105): create_clock -period 1.000 -name StepMotorWithDAcc:stepMotor4|register_need_write StepMotorWithDAcc:stepMotor4|register_need_write
+    Info (332105): create_clock -period 1.000 -name StepMotorWithDAcc:stepMotor5|register_need_write StepMotorWithDAcc:stepMotor5|register_need_write
+    Info (332105): create_clock -period 1.000 -name StepMotorWithDAcc:stepMotor6|register_need_write StepMotorWithDAcc:stepMotor6|register_need_write
+    Info (332105): create_clock -period 1.000 -name StepMotorWithDAcc:stepMotor7|register_need_write StepMotorWithDAcc:stepMotor7|register_need_write
+    Info (332105): create_clock -period 1.000 -name StepMotorWithDAcc:stepMotor8|register_need_write StepMotorWithDAcc:stepMotor8|register_need_write
+    Info (332105): create_clock -period 1.000 -name StepMotorWithDAcc:stepMotor9|register_need_write StepMotorWithDAcc:stepMotor9|register_need_write
+    Info (332105): create_clock -period 1.000 -name StepMotorWithDAcc:stepMotor10|register_need_write StepMotorWithDAcc:stepMotor10|register_need_write
+    Info (332105): create_clock -period 1.000 -name StepMotorWithDAcc:stepMotor11|register_need_write StepMotorWithDAcc:stepMotor11|register_need_write
+    Info (332105): create_clock -period 1.000 -name StepMotorWithDAcc:stepMotor12|register_need_write StepMotorWithDAcc:stepMotor12|register_need_write
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -11.300
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -11.300           -3959.832 mainClk 
+Info (332146): Worst-case hold slack is 1.640
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.640               0.000 mainClk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 mainClk 
+    Info (332119):     0.234               0.000 StepMotorWithDAcc:stepMotor10|register_need_write 
+    Info (332119):     0.234               0.000 StepMotorWithDAcc:stepMotor11|register_need_write 
+    Info (332119):     0.234               0.000 StepMotorWithDAcc:stepMotor12|register_need_write 
+    Info (332119):     0.234               0.000 StepMotorWithDAcc:stepMotor1|register_need_write 
+    Info (332119):     0.234               0.000 StepMotorWithDAcc:stepMotor2|register_need_write 
+    Info (332119):     0.234               0.000 StepMotorWithDAcc:stepMotor3|register_need_write 
+    Info (332119):     0.234               0.000 StepMotorWithDAcc:stepMotor4|register_need_write 
+    Info (332119):     0.234               0.000 StepMotorWithDAcc:stepMotor5|register_need_write 
+    Info (332119):     0.234               0.000 StepMotorWithDAcc:stepMotor6|register_need_write 
+    Info (332119):     0.234               0.000 StepMotorWithDAcc:stepMotor7|register_need_write 
+    Info (332119):     0.234               0.000 StepMotorWithDAcc:stepMotor8|register_need_write 
+    Info (332119):     0.234               0.000 StepMotorWithDAcc:stepMotor9|register_need_write 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4799 megabytes
+    Info: Processing ended: Tue Jun 25 09:16:41 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flash_board>
+    <pass>
+        <loader>$TOOLKIT_DIR$\config\flashloader\ST\FlashSTM32H7xxxI_BANK1.flash</loader>
+        <range>CODE 0x8020000 0x80fffff</range>
+    </pass>
+    <pass>
+        <loader>$TOOLKIT_DIR$\config\flashloader\ST\FlashSTM32H7xxxI_BANK2.flash</loader>
+        <range>CODE 0x8100000 0x81fffff</range>
+    </pass>
+</flash_board>

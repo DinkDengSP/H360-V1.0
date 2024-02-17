@@ -1,0 +1,65 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'mainClk'
+Slack : -11.300
+TNS   : -3959.832
+
+Type  : Hold 'mainClk'
+Slack : 1.640
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'mainClk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'StepMotorWithDAcc:stepMotor10|register_need_write'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'StepMotorWithDAcc:stepMotor11|register_need_write'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'StepMotorWithDAcc:stepMotor12|register_need_write'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'StepMotorWithDAcc:stepMotor1|register_need_write'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'StepMotorWithDAcc:stepMotor2|register_need_write'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'StepMotorWithDAcc:stepMotor3|register_need_write'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'StepMotorWithDAcc:stepMotor4|register_need_write'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'StepMotorWithDAcc:stepMotor5|register_need_write'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'StepMotorWithDAcc:stepMotor6|register_need_write'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'StepMotorWithDAcc:stepMotor7|register_need_write'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'StepMotorWithDAcc:stepMotor8|register_need_write'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'StepMotorWithDAcc:stepMotor9|register_need_write'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

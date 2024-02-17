@@ -1,0 +1,10 @@
+F:\Dink\LiHeH360_LiquidDetectWatch\LiquidDetectWatch\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+F:\Dink\LiHeH360_LiquidDetectWatch\LiquidDetectWatch\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+F:\Dink\LiHeH360_LiquidDetectWatch\LiquidDetectWatch\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+F:\Dink\LiHeH360_LiquidDetectWatch\LiquidDetectWatch\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+F:\Dink\LiHeH360_LiquidDetectWatch\LiquidDetectWatch\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.H360LiquidDetectWatch.resources
+F:\Dink\LiHeH360_LiquidDetectWatch\LiquidDetectWatch\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\Dink\LiHeH360_LiquidDetectWatch\LiquidDetectWatch\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+F:\Dink\LiHeH360_LiquidDetectWatch\LiquidDetectWatch\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+F:\Dink\LiHeH360_LiquidDetectWatch\LiquidDetectWatch\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+F:\Dink\LiHeH360_LiquidDetectWatch\LiquidDetectWatch\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

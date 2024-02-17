@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": ".\\..\\..\\CommonFunc"
+		},
+		{
+			"path": ".\\..\\..\\CommonService"
+		},
+		{
+			"path": ".\\..\\..\\Driver"
+		},
+		{
+			"path": ".\\..\\..\\UCOS3.07"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"serviceipcstepmotor10.h": "c"
+		}
+	}
+}

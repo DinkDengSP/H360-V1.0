@@ -1,0 +1,14 @@
+{
+  "ewp": "${workspaceFolder}\\ProjectFiles\\LH_Cloud_App.ewp",
+  "configuration": "Release",
+  "toolchain": "C:\\\\Program Files\\\\IAR Systems\\\\IAR ARM 9.3",
+  "project": {
+    "path": "${workspaceFolder}\\ProjectFiles\\LH_Cloud_App.ewp"
+  },
+  "configs": {
+    "${workspaceFolder}\\ProjectFiles\\LH_Cloud_App.ewp": "Release"
+  },
+  "workbench": {
+    "path": "C:\\Program Files\\IAR Systems\\IAR ARM 9.3"
+  }
+}

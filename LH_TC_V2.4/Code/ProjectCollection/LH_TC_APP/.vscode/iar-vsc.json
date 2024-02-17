@@ -1,0 +1,11 @@
+{
+  "project": {
+    "path": "${workspaceFolder}\\ProjectFiles\\LH_TC_APP.ewp"
+  },
+  "configs": {
+    "${workspaceFolder}\\ProjectFiles\\LH_TC_APP.ewp": "H360_Release"
+  },
+  "workbench": {
+    "path": "C:\\Program Files\\IAR Systems\\IAR ARM 9.3"
+  }
+}

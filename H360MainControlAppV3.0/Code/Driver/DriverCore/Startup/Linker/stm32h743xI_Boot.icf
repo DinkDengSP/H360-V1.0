@@ -1,0 +1,93 @@
+/*###ICF### Section handled by ICF editor, don't touch! ****/
+/*-Editor annotation file-*/
+/* IcfEditorFile="$TOOLKIT_DIR$\config\linker\ST\IcfEditor\stm32h7xx.xml" */
+/*-Specials-*/
+define symbol __ICFEDIT_intvec_start__ = 0x08000000;/*中断向量表的默认起点*/
+/*-Memory Regions-*/
+define symbol __ICFEDIT_region_FLASH1_start__ = 0x08000000;/*H7的Flash分两块,这是第一块,靠Boot选择启动块*/
+define symbol __ICFEDIT_region_FLASH1_end__   = 0x0801FFFF;
+define symbol __ICFEDIT_region_NORPSR_start__ = 0x0;/*Nor Flash区域,靠FMC配置读写*/
+define symbol __ICFEDIT_region_NORPSR_end__   = 0x0;
+define symbol __ICFEDIT_region_NAND_start__   = 0x0;/*Nand Flash区域,靠FMC配置读写*/
+define symbol __ICFEDIT_region_NAND_end__     = 0x0;
+define symbol __ICFEDIT_region_QSPI_start__   = 0x0;/*QUAD SPI数据块,靠DMA读写*/
+define symbol __ICFEDIT_region_QSPI_end__     = 0x0;
+/*关于不同区域内存这一块,一定要注意内存的速度和DMA的可访问性,有些内存一些特定的DMA访问不了*/
+define symbol __ICFEDIT_region_ITCMR_start__  = 0x00000000;/*ITCM紧密耦合内存,64KB,400MHZ,该区域可以用于RamFunc,将代码放在内存运行*/
+define symbol __ICFEDIT_region_ITCMR_end__    = 0x0000FFFF;
+define symbol __ICFEDIT_region_DTCMR1_start__ = 0x20000000;/*DTCM第一块,紧密耦合内存,400MHZ,可以用于存放栈和系统全局变量,64KB*/
+define symbol __ICFEDIT_region_DTCMR1_end__   = 0x2000FFFF;
+define symbol __ICFEDIT_region_DTCMR2_start__ = 0x20010000;/*DTCM第二块,紧密耦合内存,400MHZ,可以用于存放栈和系统全局变量,64KB*/
+define symbol __ICFEDIT_region_DTCMR2_end__   = 0x2001FFFF;
+define symbol __ICFEDIT_region_AXISR_start__  = 0x24000000;/*D1域内存,512KB,200MHZ,用于存放堆和动态分配内存*/
+define symbol __ICFEDIT_region_AXISR_end__    = 0x2407FFFF;
+define symbol __ICFEDIT_region_SRAM1_start__  = 0x30000000;/*D2域内存,128KB,正常访问*/
+define symbol __ICFEDIT_region_SRAM1_end__    = 0x3001FFFF;
+define symbol __ICFEDIT_region_SRAM2_start__  = 0x30020000;/*D2域内存,128KB,200MHZ*/
+define symbol __ICFEDIT_region_SRAM2_end__    = 0x3003FFFF;
+define symbol __ICFEDIT_region_SRAM3_start__  = 0x30040000;/*D2域内存,32KB,一般用于CAN和USB缓存区*/
+define symbol __ICFEDIT_region_SRAM3_end__    = 0x30047FFF;
+define symbol __ICFEDIT_region_SRAM4_start__  = 0x38000000;/*D3域内存,64KB,用于待机保存数据*/
+define symbol __ICFEDIT_region_SRAM4_end__    = 0x3800FFFF;
+define symbol __ICFEDIT_region_BKPR_start__   = 0x38800000;/*D3域内存,4KB,用于极低功耗下保持内存*/
+define symbol __ICFEDIT_region_BKPR_end__     = 0x38800FFF;
+define symbol __ICFEDIT_region_SRAM_IS62_start__   = 0x6C000000;/*SRAM内存*/
+define symbol __ICFEDIT_region_SRAM_IS62_end__     = 0x6C0FFFFF;
+
+/*-Sizes-*/
+define symbol __ICFEDIT_size_cstack__     = 0x2000;/*栈空间*/
+define symbol __ICFEDIT_size_proc_stack__ = 0x0;
+define symbol __ICFEDIT_size_heap__       = 0x2000;/*堆空间*/
+/**** End of ICF editor section. ###ICF###*/
+
+define memory mem with size = 4G;
+define region FLASH_region  =   mem:[from __ICFEDIT_region_FLASH1_start__ to __ICFEDIT_region_FLASH1_end__];
+
+define region NORPSR_region =   mem:[from __ICFEDIT_region_NORPSR_start__ to __ICFEDIT_region_NORPSR_end__];
+
+define region NAND_region   =   mem:[from __ICFEDIT_region_NAND_start__   to __ICFEDIT_region_NAND_end__  ];
+
+define region QSPI_region   =   mem:[from __ICFEDIT_region_QSPI_start__   to __ICFEDIT_region_QSPI_end__  ];
+
+define region ITCMR_region  =   mem:[from __ICFEDIT_region_ITCMR_start__  to __ICFEDIT_region_ITCMR_end__ ];
+
+define region DTCMR_region  =   mem:[from __ICFEDIT_region_DTCMR1_start__ to __ICFEDIT_region_DTCMR1_end__]
+                              | mem:[from __ICFEDIT_region_DTCMR2_start__ to __ICFEDIT_region_DTCMR2_end__];
+
+define region AXISR_region  =   mem:[from __ICFEDIT_region_AXISR_start__  to __ICFEDIT_region_AXISR_end__ ];
+
+define region D2_SRAM1_region  =   mem:[from __ICFEDIT_region_SRAM1_start__ to __ICFEDIT_region_SRAM1_end__];
+
+define region D2_SRAM2_region  =   mem:[from __ICFEDIT_region_SRAM2_start__ to __ICFEDIT_region_SRAM2_end__];
+
+define region D3_SRAM4_region  =   mem:[from __ICFEDIT_region_SRAM4_start__ to __ICFEDIT_region_SRAM4_end__];
+
+define region BKPR_region   =   mem:[from __ICFEDIT_region_BKPR_start__   to __ICFEDIT_region_BKPR_end__  ];
+
+define region SRAM_IS62_region    =   mem:[from __ICFEDIT_region_SRAM_IS62_start__   to __ICFEDIT_region_SRAM_IS62_end__  ];
+
+define block CSTACK     with alignment = 8, size = __ICFEDIT_size_cstack__     { };/*定义栈空间*/
+define block PROC_STACK with alignment = 8, size = __ICFEDIT_size_proc_stack__ { };
+define block HEAP       with alignment = 8, size = __ICFEDIT_size_heap__       { };
+
+initialize by copy { readwrite,section .textrw};
+
+if (isdefinedsymbol(__USE_DLIB_PERTHREAD))
+{
+  // Required in a multi-threaded application
+  initialize by copy with packing = none { section __DLIB_PERTHREAD };
+}
+do not initialize  { section .sram_is62 };
+
+place at address mem:__ICFEDIT_intvec_start__ { readonly section .intvec };
+
+place in FLASH_region  { readonly };/*2MB默认的代码区域*/
+place in QSPI_region   { readonly section application_specific_ro };/*特定的只读代码区,无法运行代码*/
+place in ITCMR_region  { section .textrw };/*64KB代码重定位区域,需要手动指定textrw特定方法位于该区域*/
+place in DTCMR_region  { readwrite, section .dtcm_ram, block CSTACK, block PROC_STACK };/*128KB全局变量,栈,以及特定变量块dtcm_ram存这里*/
+place in AXISR_region  { section .axi_sram, block HEAP };/*512KB,栈和特定区块axi_sram放这里*/
+place in D2_SRAM1_region   { section .d2_sram1 };/*128KB,特定区块sram放这里*/
+place in D2_SRAM2_region   { section .d2_sram2 };/*128KB,特定区块sram放这里*/
+place in D3_SRAM4_region   { section .d3_sram4 };/*64KB,特定区块sram放这里*/
+place in BKPR_region   { section .backup_sram };
+place in SRAM_IS62_region    { section .sram_is62 };

@@ -1,0 +1,18 @@
+{
+  "workspace": {
+    "path": "${workspaceFolder}\\Code\\ProjectCollection\\MidControl_V1.0.eww"
+  },
+  "workspaces": {
+    "${workspaceFolder}\\Code\\ProjectCollection\\MidControl_V1.0.eww": {
+      "configs": {
+        "${workspaceFolder}\\Code\\ProjectCollection\\MidControlApp\\ProjectFiles\\MidControlApp.ewp": "CS"
+      },
+      "selected": {
+        "path": "${workspaceFolder}\\Code\\ProjectCollection\\MidControlApp\\ProjectFiles\\MidControlApp.ewp"
+      }
+    }
+  },
+  "workbench": {
+    "path": "C:\\Program Files\\IAR Systems\\IAR ARM 9.3"
+  }
+}

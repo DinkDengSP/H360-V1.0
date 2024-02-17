@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"MCU_Random.C": "cpp",
+			"mcu_wdg_driverconfig.h": "c",
+			"MCU_Random.H": "cpp",
+			"mcu_uart_universal.h": "c",
+			"mcu_uart_driverconfig.h": "c",
+			"boardlan8700_config.h": "c",
+			"boardlan8700_driverconfig.h": "c",
+			"mcu_eth_driverconfig.h": "c",
+			"eth_config.h": "c",
+			"mcu_spi_driverconfig.h": "c",
+			"driverheadermcu.h": "c",
+			"boardw5500_driverconfig.h": "c"
+		}
+	}
+}

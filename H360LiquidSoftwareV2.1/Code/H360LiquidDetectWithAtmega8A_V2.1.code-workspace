@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"liquidcmdproc.h": "c",
+			"baseinclude.h": "c"
+		}
+	}
+}

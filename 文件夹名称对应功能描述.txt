@@ -1,0 +1,45 @@
+1. H360ActionBoardSoftwareV1.0 : 老版本的带手动标定速度曲线的下位机,目前已经停用,只是保留版本记录
+
+2. H360ActionBoardSoftwareV2.1 : H360的四号机(蓝色电路板)使用的程序,包含五块设备下位机,一块轨道下位机的程序
+
+3. H360ActionBoardSoftwareV2.2: H360的三号机(黑色电路板)使用的程序,程序的资源映射发生了变化,同时轨道板程序将动作放到下位机
+
+3. H360ActionBoardSoftwareV2.3: H360的主控下移的下位机版本,降速带令牌包,适配F407版本的下位机
+
+4. H360ActionBoardSoftwareV2.3: H360的主控下移的下位机版本,全速不需要令牌包,适配H743版本的下位机
+
+4. H360LiquidSoftwareV2.0: H360的液面探测程序,带通讯功能,不带基准电压检测功能,目前已经停用
+
+5. H360LiquidSoftwareV2.1: H360的液面探测程序,带通讯功能,带基准电压检测功能,带多阈值切换功能
+
+6. H360LiquidToolV2.0 : H360的液面探测调试软件,可以显示探液波形
+
+7. H360MainControlAppV1.0: H360的四号机(蓝色电路板)使用的主控程序
+
+8. H360MainControlAppV1.1: H360的三号机(黑色电路板)使用的主控程序
+
+8. H360MainControlAppV1.2: H360的生产使用的主控程序,使用自动稀释功能
+
+8. H360MainControlAppV1.2NewSensor: H360的生产使用的主控程序,使用自动稀释功能,该版本适配浓缩液,AB液浮球信号异常的处理.
+
+8. H360MainControlAppV1.3: H360的生产使用的主控程序,新版液路支持
+
+9. H360MainControlAppV2.2: H360的三号机(黑色电路板)使用的主控程序,逐渐将主控程序下移并完善
+
+10. H360SerialMainControlWatchV1.0: H360的串口监控软件,可以监控主控串口的调试信息,实时知道当前设备的状态
+
+11. H360TempControlV1.0 : H360的温控板程序,第一版串口通讯协议的程序
+
+12. H360_H200_TemperatureControlV2.2: H360和H200的温控板,基于CAN通讯,第二版温控程序
+
+13. RailMainControlBoard_V2.1: H360的轨道主控程序,用于H360的四号机,不再更新
+
+14. H360_H200_RailMainControlBoardV2.2 : H360和H200的轨道程序,主控动作下移,且用于联机版本
+
+15. StepMotorCPLD_V1.0 : 立禾公司下位机CPLD步进电机脉冲发送的程序
+
+16. StepMotorCurveCalcTool: 通过几个核心参数计算电机运行曲线的辅助程序
+
+
+
+
